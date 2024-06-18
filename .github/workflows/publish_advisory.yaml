@@ -1,0 +1,49 @@
+name: Publish security advisory
+
+on:
+  workflow_dispatch:
+    inputs:
+      vulnerability_ids:
+        description: "Comma-separated list of vulnerability ids"
+        required: true
+
+jobs:
+  publish_advisory:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Split input string into list
+        id: split_input
+        run: |
+          echo "INPUT_vulnerability_ids=${{ github.event.inputs.vulnerability_ids }}" >> $GITHUB_ENV
+          IFS=',' read -r -a VULNERABILITY_LIST <<< "${{ github.event.inputs.vulnerability_ids }}"
+          echo "VULNERABILITY_LIST=${VULNERABILITY_LIST[@]}" >> $GITHUB_ENV
+        env:
+          vulnerability_ids: ${{ inputs.vulnerability_ids }}
+
+      - name: Run Docker container
+        run: |
+          docker run \
+            -e PGP_SECRET_KEY="${{ secrets.PGP_SECRET_KEY }}" \
+            -e PGP_SECRET_KEY_PASSPHRASE="${{ secrets.PGP_SECRET_KEY_PASSPHRASE }}" \
+            -e SECOBSERVE_API_TOKEN="${{ secrets.SECOBSERVE_API_TOKEN }}" \
+            -v ./csaf/v2/advisories:/stackable \
+            oci.stackable.tech/stackable/csaf_publisher:0.0.0-dev $VULNERABILITY_LIST
+        env:
+          VULNERABILITY_LIST: ${{ env.VULNERABILITY_LIST }}
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Publish advisory for: $VULNERABILITY_LIST"
+          git push
+        env:
+          VULNERABILITY_LIST: ${{ env.VULNERABILITY_LIST }}
