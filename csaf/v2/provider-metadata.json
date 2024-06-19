@@ -1,0 +1,26 @@
+{
+  "canonical_url": "https://stackabletech.github.io/advisories/.well-known/csaf/provider-metadata.json",
+  "distributions": [
+    {
+      "directory_url": "https://stackabletech.github.io/advisories/csaf/v2/advisories/"
+    }
+  ],
+  "last_updated": "2024-06-19T09:00:00.0Z",
+  "list_on_CSAF_aggregators": true,
+  "metadata_version": "2.0",
+  "mirror_on_CSAF_aggregators": true,
+  "public_openpgp_keys": [
+    {
+      "fingerprint": "A4BE1EC463AA541E15FF54AB88EDA0F297A4367A",
+      "url": "https://stackabletech.github.io/advisories/A2A781A51BC3B8C6.txt"
+    }
+  ],
+  "publisher": {
+    "category": "vendor",
+    "contact_details": "security@stackable.tech",
+    "issuing_authority": "The Stackable Security Team is responsible for vulnerability handling across all Stackable offerings.",
+    "name": "Stackable Security",
+    "namespace": "https://www.stackable.tech"
+  },
+  "role": "csaf_trusted_provider"
+}
