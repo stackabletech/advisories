@@ -12,7 +12,7 @@
   "public_openpgp_keys": [
     {
       "fingerprint": "A4BE1EC463AA541E15FF54AB88EDA0F297A4367A",
-      "url": "https://advisories.stackable.tech/A2A781A51BC3B8C6.txt"
+      "url": "https://advisories.stackable.tech/csaf/v2/openpgp/A2A781A51BC3B8C6.txt"
     }
   ],
   "publisher": {
