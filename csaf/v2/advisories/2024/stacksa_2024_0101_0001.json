@@ -1,0 +1,441 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en-US",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to Stackable GmbH and provide a link to the original.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "product-security@stackable.tech",
+      "issuing_authority": "The Stackable Security Team is responsible for vulnerability handling across all Stackable offerings.",
+      "name": "Stackable GmbH",
+      "namespace": "https://www.stackable.tech/"
+    },
+    "title": "Stackable Security Advisory for: CVE-2023-51767",
+    "tracking": {
+      "current_release_date": "2024-11-11T20:20:37.462654Z",
+      "generator": {
+        "engine": {
+          "name": "SecObserve",
+          "version": "1.21.0"
+        }
+      },
+      "id": "STACKSA_2024_0101_0001",
+      "initial_release_date": "2024-11-11T20:20:37.462654Z",
+      "revision_history": [
+        {
+          "date": "2024-11-11T20:20:37.462654Z",
+          "number": "1",
+          "summary": "Initial release"
+        }
+      ],
+      "status": "draft",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "2.6.3-stackable24.7.0-amd64",
+                    "product": {
+                      "name": "airflow:2.6.3-stackable24.7.0-amd64",
+                      "product_id": "pkg:oci/airflow@sha256%3A5b5412bc7bcb1b1d783e57d0b9940fc752d17b9c8b1dbbdedcc5cd86a7de6a11?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fairflow",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/airflow@sha256:5b5412bc7bcb1b1d783e57d0b9940fc752d17b9c8b1dbbdedcc5cd86a7de6a11?arch=amd64&repository_url=docker.stackable.tech/stackable/airflow"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "2.8.1-stackable24.7.0-amd64",
+                    "product": {
+                      "name": "airflow:2.8.1-stackable24.7.0-amd64",
+                      "product_id": "pkg:oci/airflow@sha256%3A0c48945e194f02437020ec4993f3e011ebea080ab35f9eb900784708d1bd7da7?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fairflow",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/airflow@sha256:0c48945e194f02437020ec4993f3e011ebea080ab35f9eb900784708d1bd7da7?arch=amd64&repository_url=docker.stackable.tech/stackable/airflow"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "2.8.4-stackable24.7.0-amd64",
+                    "product": {
+                      "name": "airflow:2.8.4-stackable24.7.0-amd64",
+                      "product_id": "pkg:oci/airflow@sha256%3A404e0feb11a4ed6dac331c2420f090ce4cc83acc0de4a41e0a65189e162d718e?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fairflow",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/airflow@sha256:404e0feb11a4ed6dac331c2420f090ce4cc83acc0de4a41e0a65189e162d718e?arch=amd64&repository_url=docker.stackable.tech/stackable/airflow"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "2.9.2-stackable24.7.0-amd64",
+                    "product": {
+                      "name": "airflow:2.9.2-stackable24.7.0-amd64",
+                      "product_id": "pkg:oci/airflow@sha256%3Aafe4d5e83cc1fd63e995b3054734818a1cd66498a56b8c39f0130330ed917def?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fairflow",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/airflow@sha256:afe4d5e83cc1fd63e995b3054734818a1cd66498a56b8c39f0130330ed917def?arch=amd64&repository_url=docker.stackable.tech/stackable/airflow"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "airflow"
+              }
+            ],
+            "category": "architecture",
+            "name": "amd64"
+          },
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "2.6.3-stackable24.7.0-arm64",
+                    "product": {
+                      "name": "airflow:2.6.3-stackable24.7.0-arm64",
+                      "product_id": "pkg:oci/airflow@sha256%3A38c1badd34a7eb0273cea86555325fe27fc7a9961b85a0d0b64ab9b9d3635b5f?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fairflow",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/airflow@sha256:38c1badd34a7eb0273cea86555325fe27fc7a9961b85a0d0b64ab9b9d3635b5f?arch=arm64&repository_url=docker.stackable.tech/stackable/airflow"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "2.8.1-stackable24.7.0-arm64",
+                    "product": {
+                      "name": "airflow:2.8.1-stackable24.7.0-arm64",
+                      "product_id": "pkg:oci/airflow@sha256%3A23a91875668f481be90f4b4a0b6d9766f889aaaa404e34e19fe23423f9d304a9?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fairflow",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/airflow@sha256:23a91875668f481be90f4b4a0b6d9766f889aaaa404e34e19fe23423f9d304a9?arch=arm64&repository_url=docker.stackable.tech/stackable/airflow"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "2.8.4-stackable24.7.0-arm64",
+                    "product": {
+                      "name": "airflow:2.8.4-stackable24.7.0-arm64",
+                      "product_id": "pkg:oci/airflow@sha256%3A1c3851afa94217892ce3ea975ed391f1b73f9f0c35b1eda6dd9089526639887e?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fairflow",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/airflow@sha256:1c3851afa94217892ce3ea975ed391f1b73f9f0c35b1eda6dd9089526639887e?arch=arm64&repository_url=docker.stackable.tech/stackable/airflow"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "2.9.2-stackable24.7.0-arm64",
+                    "product": {
+                      "name": "airflow:2.9.2-stackable24.7.0-arm64",
+                      "product_id": "pkg:oci/airflow@sha256%3Af0d960a0ca97110f3a629edbb0b8e0325529f5fd8ac6398f1559bbde2a44c8b2?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fairflow",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/airflow@sha256:f0d960a0ca97110f3a629edbb0b8e0325529f5fd8ac6398f1559bbde2a44c8b2?arch=arm64&repository_url=docker.stackable.tech/stackable/airflow"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "airflow"
+              }
+            ],
+            "category": "architecture",
+            "name": "arm64"
+          }
+        ],
+        "category": "vendor",
+        "name": "Stackable"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "8.7p1-38.el9_4.4",
+                "product": {
+                  "name": "openssh:8.7p1-38.el9_4.4",
+                  "product_id": "pkg:rpm/rhel/openssh@8.7p1-38.el9_4.4?arch=x86_64&upstream=openssh-8.7p1-38.el9_4.4.src.rpm&distro=rhel-9.4",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/rhel/openssh@8.7p1-38.el9_4.4?arch=x86_64&distro=rhel-9.4&upstream=openssh-8.7p1-38.el9_4.4.src.rpm"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "8.7p1-38.el9_4.4",
+                "product": {
+                  "name": "openssh:8.7p1-38.el9_4.4",
+                  "product_id": "pkg:rpm/rhel/openssh@8.7p1-38.el9_4.4?arch=aarch64&upstream=openssh-8.7p1-38.el9_4.4.src.rpm&distro=rhel-9.4",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/rhel/openssh@8.7p1-38.el9_4.4?arch=aarch64&distro=rhel-9.4&upstream=openssh-8.7p1-38.el9_4.4.src.rpm"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "openssh"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "8.7p1-38.el9_4.4",
+                "product": {
+                  "name": "openssh-clients:8.7p1-38.el9_4.4",
+                  "product_id": "pkg:rpm/rhel/openssh-clients@8.7p1-38.el9_4.4?arch=x86_64&upstream=openssh-8.7p1-38.el9_4.4.src.rpm&distro=rhel-9.4",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/rhel/openssh-clients@8.7p1-38.el9_4.4?arch=x86_64&distro=rhel-9.4&upstream=openssh-8.7p1-38.el9_4.4.src.rpm"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "8.7p1-38.el9_4.4",
+                "product": {
+                  "name": "openssh-clients:8.7p1-38.el9_4.4",
+                  "product_id": "pkg:rpm/rhel/openssh-clients@8.7p1-38.el9_4.4?arch=aarch64&upstream=openssh-8.7p1-38.el9_4.4.src.rpm&distro=rhel-9.4",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/rhel/openssh-clients@8.7p1-38.el9_4.4?arch=aarch64&distro=rhel-9.4&upstream=openssh-8.7p1-38.el9_4.4.src.rpm"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "openssh-clients"
+          }
+        ],
+        "category": "vendor",
+        "name": "rhel"
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssh:8.7p1-38.el9_4.4@airflow:2.6.3-stackable24.7.0-amd64",
+          "product_id": "openssh:8.7p1-38.el9_4.4@airflow:2.6.3-stackable24.7.0-amd64"
+        },
+        "product_reference": "pkg:rpm/rhel/openssh@8.7p1-38.el9_4.4?arch=x86_64&upstream=openssh-8.7p1-38.el9_4.4.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/airflow@sha256%3A5b5412bc7bcb1b1d783e57d0b9940fc752d17b9c8b1dbbdedcc5cd86a7de6a11?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fairflow"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssh-clients:8.7p1-38.el9_4.4@airflow:2.6.3-stackable24.7.0-amd64",
+          "product_id": "openssh-clients:8.7p1-38.el9_4.4@airflow:2.6.3-stackable24.7.0-amd64"
+        },
+        "product_reference": "pkg:rpm/rhel/openssh-clients@8.7p1-38.el9_4.4?arch=x86_64&upstream=openssh-8.7p1-38.el9_4.4.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/airflow@sha256%3A5b5412bc7bcb1b1d783e57d0b9940fc752d17b9c8b1dbbdedcc5cd86a7de6a11?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fairflow"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssh:8.7p1-38.el9_4.4@airflow:2.8.1-stackable24.7.0-amd64",
+          "product_id": "openssh:8.7p1-38.el9_4.4@airflow:2.8.1-stackable24.7.0-amd64"
+        },
+        "product_reference": "pkg:rpm/rhel/openssh@8.7p1-38.el9_4.4?arch=x86_64&upstream=openssh-8.7p1-38.el9_4.4.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/airflow@sha256%3A0c48945e194f02437020ec4993f3e011ebea080ab35f9eb900784708d1bd7da7?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fairflow"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssh-clients:8.7p1-38.el9_4.4@airflow:2.8.1-stackable24.7.0-amd64",
+          "product_id": "openssh-clients:8.7p1-38.el9_4.4@airflow:2.8.1-stackable24.7.0-amd64"
+        },
+        "product_reference": "pkg:rpm/rhel/openssh-clients@8.7p1-38.el9_4.4?arch=x86_64&upstream=openssh-8.7p1-38.el9_4.4.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/airflow@sha256%3A0c48945e194f02437020ec4993f3e011ebea080ab35f9eb900784708d1bd7da7?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fairflow"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssh:8.7p1-38.el9_4.4@airflow:2.8.4-stackable24.7.0-amd64",
+          "product_id": "openssh:8.7p1-38.el9_4.4@airflow:2.8.4-stackable24.7.0-amd64"
+        },
+        "product_reference": "pkg:rpm/rhel/openssh@8.7p1-38.el9_4.4?arch=x86_64&upstream=openssh-8.7p1-38.el9_4.4.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/airflow@sha256%3A404e0feb11a4ed6dac331c2420f090ce4cc83acc0de4a41e0a65189e162d718e?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fairflow"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssh-clients:8.7p1-38.el9_4.4@airflow:2.8.4-stackable24.7.0-amd64",
+          "product_id": "openssh-clients:8.7p1-38.el9_4.4@airflow:2.8.4-stackable24.7.0-amd64"
+        },
+        "product_reference": "pkg:rpm/rhel/openssh-clients@8.7p1-38.el9_4.4?arch=x86_64&upstream=openssh-8.7p1-38.el9_4.4.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/airflow@sha256%3A404e0feb11a4ed6dac331c2420f090ce4cc83acc0de4a41e0a65189e162d718e?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fairflow"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssh:8.7p1-38.el9_4.4@airflow:2.9.2-stackable24.7.0-amd64",
+          "product_id": "openssh:8.7p1-38.el9_4.4@airflow:2.9.2-stackable24.7.0-amd64"
+        },
+        "product_reference": "pkg:rpm/rhel/openssh@8.7p1-38.el9_4.4?arch=x86_64&upstream=openssh-8.7p1-38.el9_4.4.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/airflow@sha256%3Aafe4d5e83cc1fd63e995b3054734818a1cd66498a56b8c39f0130330ed917def?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fairflow"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssh-clients:8.7p1-38.el9_4.4@airflow:2.9.2-stackable24.7.0-amd64",
+          "product_id": "openssh-clients:8.7p1-38.el9_4.4@airflow:2.9.2-stackable24.7.0-amd64"
+        },
+        "product_reference": "pkg:rpm/rhel/openssh-clients@8.7p1-38.el9_4.4?arch=x86_64&upstream=openssh-8.7p1-38.el9_4.4.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/airflow@sha256%3Aafe4d5e83cc1fd63e995b3054734818a1cd66498a56b8c39f0130330ed917def?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fairflow"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssh-clients:8.7p1-38.el9_4.4@airflow:2.6.3-stackable24.7.0-arm64",
+          "product_id": "openssh-clients:8.7p1-38.el9_4.4@airflow:2.6.3-stackable24.7.0-arm64"
+        },
+        "product_reference": "pkg:rpm/rhel/openssh-clients@8.7p1-38.el9_4.4?arch=aarch64&upstream=openssh-8.7p1-38.el9_4.4.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/airflow@sha256%3A38c1badd34a7eb0273cea86555325fe27fc7a9961b85a0d0b64ab9b9d3635b5f?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fairflow"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssh:8.7p1-38.el9_4.4@airflow:2.6.3-stackable24.7.0-arm64",
+          "product_id": "openssh:8.7p1-38.el9_4.4@airflow:2.6.3-stackable24.7.0-arm64"
+        },
+        "product_reference": "pkg:rpm/rhel/openssh@8.7p1-38.el9_4.4?arch=aarch64&upstream=openssh-8.7p1-38.el9_4.4.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/airflow@sha256%3A38c1badd34a7eb0273cea86555325fe27fc7a9961b85a0d0b64ab9b9d3635b5f?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fairflow"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssh-clients:8.7p1-38.el9_4.4@airflow:2.8.1-stackable24.7.0-arm64",
+          "product_id": "openssh-clients:8.7p1-38.el9_4.4@airflow:2.8.1-stackable24.7.0-arm64"
+        },
+        "product_reference": "pkg:rpm/rhel/openssh-clients@8.7p1-38.el9_4.4?arch=aarch64&upstream=openssh-8.7p1-38.el9_4.4.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/airflow@sha256%3A23a91875668f481be90f4b4a0b6d9766f889aaaa404e34e19fe23423f9d304a9?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fairflow"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssh:8.7p1-38.el9_4.4@airflow:2.8.1-stackable24.7.0-arm64",
+          "product_id": "openssh:8.7p1-38.el9_4.4@airflow:2.8.1-stackable24.7.0-arm64"
+        },
+        "product_reference": "pkg:rpm/rhel/openssh@8.7p1-38.el9_4.4?arch=aarch64&upstream=openssh-8.7p1-38.el9_4.4.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/airflow@sha256%3A23a91875668f481be90f4b4a0b6d9766f889aaaa404e34e19fe23423f9d304a9?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fairflow"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssh-clients:8.7p1-38.el9_4.4@airflow:2.8.4-stackable24.7.0-arm64",
+          "product_id": "openssh-clients:8.7p1-38.el9_4.4@airflow:2.8.4-stackable24.7.0-arm64"
+        },
+        "product_reference": "pkg:rpm/rhel/openssh-clients@8.7p1-38.el9_4.4?arch=aarch64&upstream=openssh-8.7p1-38.el9_4.4.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/airflow@sha256%3A1c3851afa94217892ce3ea975ed391f1b73f9f0c35b1eda6dd9089526639887e?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fairflow"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssh:8.7p1-38.el9_4.4@airflow:2.8.4-stackable24.7.0-arm64",
+          "product_id": "openssh:8.7p1-38.el9_4.4@airflow:2.8.4-stackable24.7.0-arm64"
+        },
+        "product_reference": "pkg:rpm/rhel/openssh@8.7p1-38.el9_4.4?arch=aarch64&upstream=openssh-8.7p1-38.el9_4.4.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/airflow@sha256%3A1c3851afa94217892ce3ea975ed391f1b73f9f0c35b1eda6dd9089526639887e?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fairflow"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssh-clients:8.7p1-38.el9_4.4@airflow:2.9.2-stackable24.7.0-arm64",
+          "product_id": "openssh-clients:8.7p1-38.el9_4.4@airflow:2.9.2-stackable24.7.0-arm64"
+        },
+        "product_reference": "pkg:rpm/rhel/openssh-clients@8.7p1-38.el9_4.4?arch=aarch64&upstream=openssh-8.7p1-38.el9_4.4.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/airflow@sha256%3Af0d960a0ca97110f3a629edbb0b8e0325529f5fd8ac6398f1559bbde2a44c8b2?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fairflow"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssh:8.7p1-38.el9_4.4@airflow:2.9.2-stackable24.7.0-arm64",
+          "product_id": "openssh:8.7p1-38.el9_4.4@airflow:2.9.2-stackable24.7.0-arm64"
+        },
+        "product_reference": "pkg:rpm/rhel/openssh@8.7p1-38.el9_4.4?arch=aarch64&upstream=openssh-8.7p1-38.el9_4.4.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/airflow@sha256%3Af0d960a0ca97110f3a629edbb0b8e0325529f5fd8ac6398f1559bbde2a44c8b2?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fairflow"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-51767",
+      "notes": [
+        {
+          "category": "description",
+          "text": "An authentication bypass vulnerability was found in OpenSSH. When common types of DRAM memory are used, it might allow row hammer attacks because the integer value of authenticated authpassword does not resist flips of a single bit.",
+          "title": "CVE description"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "openssh:8.7p1-38.el9_4.4@airflow:2.6.3-stackable24.7.0-amd64",
+          "openssh-clients:8.7p1-38.el9_4.4@airflow:2.6.3-stackable24.7.0-amd64",
+          "openssh:8.7p1-38.el9_4.4@airflow:2.8.1-stackable24.7.0-amd64",
+          "openssh-clients:8.7p1-38.el9_4.4@airflow:2.8.1-stackable24.7.0-amd64",
+          "openssh:8.7p1-38.el9_4.4@airflow:2.8.4-stackable24.7.0-amd64",
+          "openssh-clients:8.7p1-38.el9_4.4@airflow:2.8.4-stackable24.7.0-amd64",
+          "openssh:8.7p1-38.el9_4.4@airflow:2.9.2-stackable24.7.0-amd64",
+          "openssh-clients:8.7p1-38.el9_4.4@airflow:2.9.2-stackable24.7.0-amd64",
+          "openssh-clients:8.7p1-38.el9_4.4@airflow:2.6.3-stackable24.7.0-arm64",
+          "openssh:8.7p1-38.el9_4.4@airflow:2.6.3-stackable24.7.0-arm64",
+          "openssh-clients:8.7p1-38.el9_4.4@airflow:2.8.1-stackable24.7.0-arm64",
+          "openssh:8.7p1-38.el9_4.4@airflow:2.8.1-stackable24.7.0-arm64",
+          "openssh-clients:8.7p1-38.el9_4.4@airflow:2.8.4-stackable24.7.0-arm64",
+          "openssh:8.7p1-38.el9_4.4@airflow:2.8.4-stackable24.7.0-arm64",
+          "openssh-clients:8.7p1-38.el9_4.4@airflow:2.9.2-stackable24.7.0-arm64",
+          "openssh:8.7p1-38.el9_4.4@airflow:2.9.2-stackable24.7.0-arm64"
+        ]
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "Security Advisory",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-51767"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "no_fix_planned",
+          "details": "We took a look at the Airflow Dockerfile to determine why OpenSSH was installed. The OpenSSH client is used for cloning DAG repositories in Airflow pods. It runs in its own container (git-sync). We read the Red Hat statement for this vulnerability. Red Hat classifies this vulnerability as \"moderate\", because it only affects the local system. We agree with that. We can't install a newer OpenSSH client because Red Hat does currently not provide a newer version for UBI 9. OpenSSH >9.6 does not seem to be affected, at least only versions until 9.6 are listed as affected by the NVD.",
+          "product_ids": [
+            "openssh:8.7p1-38.el9_4.4@airflow:2.6.3-stackable24.7.0-amd64",
+            "openssh-clients:8.7p1-38.el9_4.4@airflow:2.6.3-stackable24.7.0-amd64",
+            "openssh:8.7p1-38.el9_4.4@airflow:2.8.1-stackable24.7.0-amd64",
+            "openssh-clients:8.7p1-38.el9_4.4@airflow:2.8.1-stackable24.7.0-amd64",
+            "openssh:8.7p1-38.el9_4.4@airflow:2.8.4-stackable24.7.0-amd64",
+            "openssh-clients:8.7p1-38.el9_4.4@airflow:2.8.4-stackable24.7.0-amd64",
+            "openssh:8.7p1-38.el9_4.4@airflow:2.9.2-stackable24.7.0-amd64",
+            "openssh-clients:8.7p1-38.el9_4.4@airflow:2.9.2-stackable24.7.0-amd64",
+            "openssh-clients:8.7p1-38.el9_4.4@airflow:2.6.3-stackable24.7.0-arm64",
+            "openssh:8.7p1-38.el9_4.4@airflow:2.6.3-stackable24.7.0-arm64",
+            "openssh-clients:8.7p1-38.el9_4.4@airflow:2.8.1-stackable24.7.0-arm64",
+            "openssh:8.7p1-38.el9_4.4@airflow:2.8.1-stackable24.7.0-arm64",
+            "openssh-clients:8.7p1-38.el9_4.4@airflow:2.8.4-stackable24.7.0-arm64",
+            "openssh:8.7p1-38.el9_4.4@airflow:2.8.4-stackable24.7.0-arm64",
+            "openssh-clients:8.7p1-38.el9_4.4@airflow:2.9.2-stackable24.7.0-arm64",
+            "openssh:8.7p1-38.el9_4.4@airflow:2.9.2-stackable24.7.0-arm64"
+          ]
+        }
+      ],
+      "title": "CVE-2023-51767"
+    }
+  ]
+}
