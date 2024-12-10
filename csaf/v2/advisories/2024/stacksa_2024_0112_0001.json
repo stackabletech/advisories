@@ -1,0 +1,1370 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en-US",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to Stackable GmbH and provide a link to the original.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "product-security@stackable.tech",
+      "issuing_authority": "The Stackable Security Team is responsible for vulnerability handling across all Stackable offerings.",
+      "name": "Stackable GmbH",
+      "namespace": "https://www.stackable.tech/"
+    },
+    "title": "Stackable Security Advisory for: CVE-2024-10963",
+    "tracking": {
+      "current_release_date": "2024-12-10T15:27:44.007778Z",
+      "generator": {
+        "engine": {
+          "name": "SecObserve",
+          "version": "1.22.4"
+        }
+      },
+      "id": "STACKSA_2024_0112_0001",
+      "initial_release_date": "2024-12-10T15:27:44.007778Z",
+      "revision_history": [
+        {
+          "date": "2024-12-10T15:27:44.007778Z",
+          "number": "1",
+          "summary": "Initial release"
+        }
+      ],
+      "status": "draft",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "2.9.2-stackable24.11.0-amd64",
+                    "product": {
+                      "name": "airflow:2.9.2-stackable24.11.0-amd64",
+                      "product_id": "pkg:oci/airflow@sha256%3A4cc969a29e3f878d7e2ad64441c797239c9f42eb6c01f9cb976031eaa45d7123?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fairflow",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/airflow@sha256:4cc969a29e3f878d7e2ad64441c797239c9f42eb6c01f9cb976031eaa45d7123?arch=amd64&repository_url=docker.stackable.tech/stackable/airflow"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "2.9.3-stackable24.11.0-amd64",
+                    "product": {
+                      "name": "airflow:2.9.3-stackable24.11.0-amd64",
+                      "product_id": "pkg:oci/airflow@sha256%3A21686129e53bbd08e12a8208e3ede6f036456afa641f34cda210957fc64882ca?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fairflow",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/airflow@sha256:21686129e53bbd08e12a8208e3ede6f036456afa641f34cda210957fc64882ca?arch=amd64&repository_url=docker.stackable.tech/stackable/airflow"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "2.10.2-stackable24.11.0-amd64",
+                    "product": {
+                      "name": "airflow:2.10.2-stackable24.11.0-amd64",
+                      "product_id": "pkg:oci/airflow@sha256%3A7b4bae0448ac63a6cc23b7d51f52c4071a1ecd9c7cecd730ee60092d0a62ee77?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fairflow",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/airflow@sha256:7b4bae0448ac63a6cc23b7d51f52c4071a1ecd9c7cecd730ee60092d0a62ee77?arch=amd64&repository_url=docker.stackable.tech/stackable/airflow"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "airflow"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "26.0.0-stackable24.11.0-amd64",
+                    "product": {
+                      "name": "druid:26.0.0-stackable24.11.0-amd64",
+                      "product_id": "pkg:oci/druid@sha256%3Ad10c7db72aea6220308f8bd124f811382e4f2b6318d6e1c85809b4d133493ed0?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fdruid",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/druid@sha256:d10c7db72aea6220308f8bd124f811382e4f2b6318d6e1c85809b4d133493ed0?arch=amd64&repository_url=docker.stackable.tech/stackable/druid"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "30.0.0-stackable24.11.0-amd64",
+                    "product": {
+                      "name": "druid:30.0.0-stackable24.11.0-amd64",
+                      "product_id": "pkg:oci/druid@sha256%3Af77a7590b0ac0c755f5d529f5773a50b95b1517a802c7ccf4ef02898ecc73ee8?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fdruid",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/druid@sha256:f77a7590b0ac0c755f5d529f5773a50b95b1517a802c7ccf4ef02898ecc73ee8?arch=amd64&repository_url=docker.stackable.tech/stackable/druid"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "druid"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "3.3.4-stackable24.11.0-amd64",
+                    "product": {
+                      "name": "hadoop:3.3.4-stackable24.11.0-amd64",
+                      "product_id": "pkg:oci/hadoop@sha256%3A6e81c3fb7c7771255fb0f7d6ae4f08b8f098eaa40516478d311cca20a7d1df68?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fhadoop",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/hadoop@sha256:6e81c3fb7c7771255fb0f7d6ae4f08b8f098eaa40516478d311cca20a7d1df68?arch=amd64&repository_url=docker.stackable.tech/stackable/hadoop"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "3.3.6-stackable24.11.0-amd64",
+                    "product": {
+                      "name": "hadoop:3.3.6-stackable24.11.0-amd64",
+                      "product_id": "pkg:oci/hadoop@sha256%3Aee642dd614410cd02ccc847abc45c52298caa48080d91db924d6ae496ebe2cf5?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fhadoop",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/hadoop@sha256:ee642dd614410cd02ccc847abc45c52298caa48080d91db924d6ae496ebe2cf5?arch=amd64&repository_url=docker.stackable.tech/stackable/hadoop"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "3.4.0-stackable24.11.0-amd64",
+                    "product": {
+                      "name": "hadoop:3.4.0-stackable24.11.0-amd64",
+                      "product_id": "pkg:oci/hadoop@sha256%3A86c7b8c7d4afb23098674cf16202285b5f2fad33c0189d9975c7843bb3679ff3?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fhadoop",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/hadoop@sha256:86c7b8c7d4afb23098674cf16202285b5f2fad33c0189d9975c7843bb3679ff3?arch=amd64&repository_url=docker.stackable.tech/stackable/hadoop"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "hadoop"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "2.4.18-stackable24.11.0-amd64",
+                    "product": {
+                      "name": "hbase:2.4.18-stackable24.11.0-amd64",
+                      "product_id": "pkg:oci/hbase@sha256%3Af4a7f1264d24970eda7b2e774c621858fbacd967bf47c5c88318106226299d6f?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fhbase",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/hbase@sha256:f4a7f1264d24970eda7b2e774c621858fbacd967bf47c5c88318106226299d6f?arch=amd64&repository_url=docker.stackable.tech/stackable/hbase"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "2.6.0-stackable24.11.0-amd64",
+                    "product": {
+                      "name": "hbase:2.6.0-stackable24.11.0-amd64",
+                      "product_id": "pkg:oci/hbase@sha256%3A64f10ff916d2447cc0ffe09b679213f40d60951d759ad0921a92caad653dd004?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fhbase",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/hbase@sha256:64f10ff916d2447cc0ffe09b679213f40d60951d759ad0921a92caad653dd004?arch=amd64&repository_url=docker.stackable.tech/stackable/hbase"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "hbase"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "4.0.0-stackable24.11.0-amd64",
+                    "product": {
+                      "name": "hive:4.0.0-stackable24.11.0-amd64",
+                      "product_id": "pkg:oci/hive@sha256%3Ad3cb3b8f382a90b6cd28ff372c0d60d69e02e0a751b7f5b6791b4def4a1b10d7?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fhive",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/hive@sha256:d3cb3b8f382a90b6cd28ff372c0d60d69e02e0a751b7f5b6791b4def4a1b10d7?arch=amd64&repository_url=docker.stackable.tech/stackable/hive"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "3.1.3-stackable24.11.0-amd64",
+                    "product": {
+                      "name": "hive:3.1.3-stackable24.11.0-amd64",
+                      "product_id": "pkg:oci/hive@sha256%3A03ee9018c9a8b60635a35ae742023f907d50c0e884465f3958fa8f6074c6b6e1?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fhive",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/hive@sha256:03ee9018c9a8b60635a35ae742023f907d50c0e884465f3958fa8f6074c6b6e1?arch=amd64&repository_url=docker.stackable.tech/stackable/hive"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "hive"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "3.7.1-stackable24.11.0-amd64",
+                    "product": {
+                      "name": "kafka:3.7.1-stackable24.11.0-amd64",
+                      "product_id": "pkg:oci/kafka@sha256%3A98405a3917721c94322a663e9ca3ba8f973fc76a04da3de8cb20d95bdc8615ab?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fkafka",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/kafka@sha256:98405a3917721c94322a663e9ca3ba8f973fc76a04da3de8cb20d95bdc8615ab?arch=amd64&repository_url=docker.stackable.tech/stackable/kafka"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "3.8.0-stackable24.11.0-amd64",
+                    "product": {
+                      "name": "kafka:3.8.0-stackable24.11.0-amd64",
+                      "product_id": "pkg:oci/kafka@sha256%3A83040ba36b7ed90c5a5842d7457f830245862c0aa7e10f8ce0f989d5cf16a0d5?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fkafka",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/kafka@sha256:83040ba36b7ed90c5a5842d7457f830245862c0aa7e10f8ce0f989d5cf16a0d5?arch=amd64&repository_url=docker.stackable.tech/stackable/kafka"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "kafka"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "1.21.1-stackable24.11.0-amd64",
+                    "product": {
+                      "name": "krb5:1.21.1-stackable24.11.0-amd64",
+                      "product_id": "pkg:oci/krb5@sha256%3Af18a1c04175723406d4df40dfca9c8599061dc434bddfd05ab388452f6723a09?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fkrb5",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/krb5@sha256:f18a1c04175723406d4df40dfca9c8599061dc434bddfd05ab388452f6723a09?arch=amd64&repository_url=docker.stackable.tech/stackable/krb5"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "krb5"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "1.27.0-stackable24.11.0-amd64",
+                    "product": {
+                      "name": "nifi:1.27.0-stackable24.11.0-amd64",
+                      "product_id": "pkg:oci/nifi@sha256%3Ac9a474a1b5a996b1767c59e5c9ef19ce4065ff2af61f92c2975af581f2564a86?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fnifi",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/nifi@sha256:c9a474a1b5a996b1767c59e5c9ef19ce4065ff2af61f92c2975af581f2564a86?arch=amd64&repository_url=docker.stackable.tech/stackable/nifi"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "2.0.0-stackable24.11.0-amd64",
+                    "product": {
+                      "name": "nifi:2.0.0-stackable24.11.0-amd64",
+                      "product_id": "pkg:oci/nifi@sha256%3A67ebaa643354e493c74c0565309a6b476181be81b35e72796435b721b828153f?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fnifi",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/nifi@sha256:67ebaa643354e493c74c0565309a6b476181be81b35e72796435b721b828153f?arch=amd64&repository_url=docker.stackable.tech/stackable/nifi"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "nifi"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "3.5.1-stackable24.11.0-amd64",
+                    "product": {
+                      "name": "spark-k8s:3.5.1-stackable24.11.0-amd64",
+                      "product_id": "pkg:oci/spark-k8s@sha256%3Ad35ff91e6cfbdac2263fac8bfe3040cf9f71adc815d106e5ca08699687564cad?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fspark-k8s",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/spark-k8s@sha256:d35ff91e6cfbdac2263fac8bfe3040cf9f71adc815d106e5ca08699687564cad?arch=amd64&repository_url=docker.stackable.tech/stackable/spark-k8s"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "3.5.2-stackable24.11.0-amd64",
+                    "product": {
+                      "name": "spark-k8s:3.5.2-stackable24.11.0-amd64",
+                      "product_id": "pkg:oci/spark-k8s@sha256%3Af01e4c104208d1c1e925930c6c3d28b75808d8d7da81d40b9210beb17d785adb?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fspark-k8s",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/spark-k8s@sha256:f01e4c104208d1c1e925930c6c3d28b75808d8d7da81d40b9210beb17d785adb?arch=amd64&repository_url=docker.stackable.tech/stackable/spark-k8s"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "spark-k8s"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "4.0.2-stackable24.11.0-amd64",
+                    "product": {
+                      "name": "superset:4.0.2-stackable24.11.0-amd64",
+                      "product_id": "pkg:oci/superset@sha256%3A199ba16551e358c1419292948d02d7ff6d48ec4a0781be6b0b60ccaf1db3d819?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fsuperset",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/superset@sha256:199ba16551e358c1419292948d02d7ff6d48ec4a0781be6b0b60ccaf1db3d819?arch=amd64&repository_url=docker.stackable.tech/stackable/superset"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "superset"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "451-stackable24.11.0-amd64",
+                    "product": {
+                      "name": "trino:451-stackable24.11.0-amd64",
+                      "product_id": "pkg:oci/trino@sha256%3A6c7662aad924c2cac95c37b91d08412de494221d8cf6471b73cb7e06964451d0?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Ftrino",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/trino@sha256:6c7662aad924c2cac95c37b91d08412de494221d8cf6471b73cb7e06964451d0?arch=amd64&repository_url=docker.stackable.tech/stackable/trino"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "455-stackable24.11.0-amd64",
+                    "product": {
+                      "name": "trino:455-stackable24.11.0-amd64",
+                      "product_id": "pkg:oci/trino@sha256%3Adb153220ae2b50a83353896d6028e0f79f030caac505e3aac866bfc16dbb522c?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Ftrino",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/trino@sha256:db153220ae2b50a83353896d6028e0f79f030caac505e3aac866bfc16dbb522c?arch=amd64&repository_url=docker.stackable.tech/stackable/trino"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "trino"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "3.9.2-stackable24.11.0-amd64",
+                    "product": {
+                      "name": "zookeeper:3.9.2-stackable24.11.0-amd64",
+                      "product_id": "pkg:oci/zookeeper@sha256%3A5cbb9ccdbbeedb3a053040977c49fe259b082058b14a071141f769e50a1cbb45?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fzookeeper",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/zookeeper@sha256:5cbb9ccdbbeedb3a053040977c49fe259b082058b14a071141f769e50a1cbb45?arch=amd64&repository_url=docker.stackable.tech/stackable/zookeeper"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "zookeeper"
+              }
+            ],
+            "category": "architecture",
+            "name": "amd64"
+          },
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "2.9.2-stackable24.11.0-arm64",
+                    "product": {
+                      "name": "airflow:2.9.2-stackable24.11.0-arm64",
+                      "product_id": "pkg:oci/airflow@sha256%3A299456dd13aaa7972dd416fcb703898d21f231008048ac2f62f79d98d2e74a03?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fairflow",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/airflow@sha256:299456dd13aaa7972dd416fcb703898d21f231008048ac2f62f79d98d2e74a03?arch=arm64&repository_url=docker.stackable.tech/stackable/airflow"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "2.9.3-stackable24.11.0-arm64",
+                    "product": {
+                      "name": "airflow:2.9.3-stackable24.11.0-arm64",
+                      "product_id": "pkg:oci/airflow@sha256%3Ac3186e9947791e619f37cce9c05b6a3883e0b18b398e8b5e2a5f9206fa0b4931?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fairflow",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/airflow@sha256:c3186e9947791e619f37cce9c05b6a3883e0b18b398e8b5e2a5f9206fa0b4931?arch=arm64&repository_url=docker.stackable.tech/stackable/airflow"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "2.10.2-stackable24.11.0-arm64",
+                    "product": {
+                      "name": "airflow:2.10.2-stackable24.11.0-arm64",
+                      "product_id": "pkg:oci/airflow@sha256%3A7ba49daa51de899637d2da1e4473290683866f6b754ad392d30037972b856bc5?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fairflow",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/airflow@sha256:7ba49daa51de899637d2da1e4473290683866f6b754ad392d30037972b856bc5?arch=arm64&repository_url=docker.stackable.tech/stackable/airflow"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "airflow"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "26.0.0-stackable24.11.0-arm64",
+                    "product": {
+                      "name": "druid:26.0.0-stackable24.11.0-arm64",
+                      "product_id": "pkg:oci/druid@sha256%3Ae08329c5bac56b4fa0272f6c20be21315b75a6cfe2ef23858ca63ed3c47f60ff?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fdruid",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/druid@sha256:e08329c5bac56b4fa0272f6c20be21315b75a6cfe2ef23858ca63ed3c47f60ff?arch=arm64&repository_url=docker.stackable.tech/stackable/druid"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "30.0.0-stackable24.11.0-arm64",
+                    "product": {
+                      "name": "druid:30.0.0-stackable24.11.0-arm64",
+                      "product_id": "pkg:oci/druid@sha256%3A1de30fad4dd0e085df048adfb95bb10e8787891ce014f26a4a096b55ddb317ac?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fdruid",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/druid@sha256:1de30fad4dd0e085df048adfb95bb10e8787891ce014f26a4a096b55ddb317ac?arch=arm64&repository_url=docker.stackable.tech/stackable/druid"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "druid"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "3.3.4-stackable24.11.0-arm64",
+                    "product": {
+                      "name": "hadoop:3.3.4-stackable24.11.0-arm64",
+                      "product_id": "pkg:oci/hadoop@sha256%3A5fc1640aa7fda531d872585fe4f0af630f58e0b2e1ad0cde64e981d4ec380950?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fhadoop",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/hadoop@sha256:5fc1640aa7fda531d872585fe4f0af630f58e0b2e1ad0cde64e981d4ec380950?arch=arm64&repository_url=docker.stackable.tech/stackable/hadoop"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "3.3.6-stackable24.11.0-arm64",
+                    "product": {
+                      "name": "hadoop:3.3.6-stackable24.11.0-arm64",
+                      "product_id": "pkg:oci/hadoop@sha256%3Aa75adf0b32aa584c9c46b42ee82063f0e639781960a3bcbbe93e5983fe0d721d?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fhadoop",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/hadoop@sha256:a75adf0b32aa584c9c46b42ee82063f0e639781960a3bcbbe93e5983fe0d721d?arch=arm64&repository_url=docker.stackable.tech/stackable/hadoop"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "3.4.0-stackable24.11.0-arm64",
+                    "product": {
+                      "name": "hadoop:3.4.0-stackable24.11.0-arm64",
+                      "product_id": "pkg:oci/hadoop@sha256%3A01d09bba8144b968836977f70fd3ab4d1881ea8851b1ea8c0c34a4d293b515fe?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fhadoop",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/hadoop@sha256:01d09bba8144b968836977f70fd3ab4d1881ea8851b1ea8c0c34a4d293b515fe?arch=arm64&repository_url=docker.stackable.tech/stackable/hadoop"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "hadoop"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "2.4.18-stackable24.11.0-arm64",
+                    "product": {
+                      "name": "hbase:2.4.18-stackable24.11.0-arm64",
+                      "product_id": "pkg:oci/hbase@sha256%3Aeaf29c8a8f720be69658a76be01c58d6642478a75c8431c21e7096c3b0c3d7bc?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fhbase",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/hbase@sha256:eaf29c8a8f720be69658a76be01c58d6642478a75c8431c21e7096c3b0c3d7bc?arch=arm64&repository_url=docker.stackable.tech/stackable/hbase"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "2.6.0-stackable24.11.0-arm64",
+                    "product": {
+                      "name": "hbase:2.6.0-stackable24.11.0-arm64",
+                      "product_id": "pkg:oci/hbase@sha256%3Afb4cb28ead856965e8eb759a90f150e2a3782a8c15cc349ecdb532b10362625a?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fhbase",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/hbase@sha256:fb4cb28ead856965e8eb759a90f150e2a3782a8c15cc349ecdb532b10362625a?arch=arm64&repository_url=docker.stackable.tech/stackable/hbase"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "hbase"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "4.0.0-stackable24.11.0-arm64",
+                    "product": {
+                      "name": "hive:4.0.0-stackable24.11.0-arm64",
+                      "product_id": "pkg:oci/hive@sha256%3A86ea1bf11df194c8f7cd3f2e098a9d9c467b74491b3fcbb140611643ec44c654?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fhive",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/hive@sha256:86ea1bf11df194c8f7cd3f2e098a9d9c467b74491b3fcbb140611643ec44c654?arch=arm64&repository_url=docker.stackable.tech/stackable/hive"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "3.1.3-stackable24.11.0-arm64",
+                    "product": {
+                      "name": "hive:3.1.3-stackable24.11.0-arm64",
+                      "product_id": "pkg:oci/hive@sha256%3A3a93eff4e4832050efb35c9ef823ddb69a6d3437f2ecc6125021f739574da8c5?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fhive",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/hive@sha256:3a93eff4e4832050efb35c9ef823ddb69a6d3437f2ecc6125021f739574da8c5?arch=arm64&repository_url=docker.stackable.tech/stackable/hive"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "hive"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "3.7.1-stackable24.11.0-arm64",
+                    "product": {
+                      "name": "kafka:3.7.1-stackable24.11.0-arm64",
+                      "product_id": "pkg:oci/kafka@sha256%3A2bb9dc8b02e33042757f1f243dcd84ff656dc2433e1bda91371cfd23df0c34dc?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fkafka",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/kafka@sha256:2bb9dc8b02e33042757f1f243dcd84ff656dc2433e1bda91371cfd23df0c34dc?arch=arm64&repository_url=docker.stackable.tech/stackable/kafka"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "3.8.0-stackable24.11.0-arm64",
+                    "product": {
+                      "name": "kafka:3.8.0-stackable24.11.0-arm64",
+                      "product_id": "pkg:oci/kafka@sha256%3A9d82295b57ec26ade4c36977a63016adb91ceb826a274ec7e6cd920c5c28cffe?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fkafka",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/kafka@sha256:9d82295b57ec26ade4c36977a63016adb91ceb826a274ec7e6cd920c5c28cffe?arch=arm64&repository_url=docker.stackable.tech/stackable/kafka"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "kafka"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "1.21.1-stackable24.11.0-arm64",
+                    "product": {
+                      "name": "krb5:1.21.1-stackable24.11.0-arm64",
+                      "product_id": "pkg:oci/krb5@sha256%3Ad7c0d184d6b6f0317d3ee6924f5977165c228a185b6bc26b9f873664c70f0bfc?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fkrb5",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/krb5@sha256:d7c0d184d6b6f0317d3ee6924f5977165c228a185b6bc26b9f873664c70f0bfc?arch=arm64&repository_url=docker.stackable.tech/stackable/krb5"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "krb5"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "1.27.0-stackable24.11.0-arm64",
+                    "product": {
+                      "name": "nifi:1.27.0-stackable24.11.0-arm64",
+                      "product_id": "pkg:oci/nifi@sha256%3A1f86ee007f7c1ca1b4e800e938a91eb5b647bccaeb550dda0099854f68d97bc6?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fnifi",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/nifi@sha256:1f86ee007f7c1ca1b4e800e938a91eb5b647bccaeb550dda0099854f68d97bc6?arch=arm64&repository_url=docker.stackable.tech/stackable/nifi"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "2.0.0-stackable24.11.0-arm64",
+                    "product": {
+                      "name": "nifi:2.0.0-stackable24.11.0-arm64",
+                      "product_id": "pkg:oci/nifi@sha256%3A08c9a57feb9046a8d1e8cdcb16ccf8df705a046a4e8bc5613e7f46d06d9ae1fe?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fnifi",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/nifi@sha256:08c9a57feb9046a8d1e8cdcb16ccf8df705a046a4e8bc5613e7f46d06d9ae1fe?arch=arm64&repository_url=docker.stackable.tech/stackable/nifi"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "nifi"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "3.5.1-stackable24.11.0-arm64",
+                    "product": {
+                      "name": "spark-k8s:3.5.1-stackable24.11.0-arm64",
+                      "product_id": "pkg:oci/spark-k8s@sha256%3Ab7ef02033cd695914910ae370794d1ddeac7e39f7a7bafacd8b4d0d8adb4a322?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fspark-k8s",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/spark-k8s@sha256:b7ef02033cd695914910ae370794d1ddeac7e39f7a7bafacd8b4d0d8adb4a322?arch=arm64&repository_url=docker.stackable.tech/stackable/spark-k8s"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "3.5.2-stackable24.11.0-arm64",
+                    "product": {
+                      "name": "spark-k8s:3.5.2-stackable24.11.0-arm64",
+                      "product_id": "pkg:oci/spark-k8s@sha256%3A62dc1f56dd40bcb9009d8a805096ef2c81088527149806510b47d96d764cf92c?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fspark-k8s",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/spark-k8s@sha256:62dc1f56dd40bcb9009d8a805096ef2c81088527149806510b47d96d764cf92c?arch=arm64&repository_url=docker.stackable.tech/stackable/spark-k8s"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "spark-k8s"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "4.0.2-stackable24.11.0-arm64",
+                    "product": {
+                      "name": "superset:4.0.2-stackable24.11.0-arm64",
+                      "product_id": "pkg:oci/superset@sha256%3A976aaa3397a4d79e2cce7b4badb4f2b7792a52f3b6c757514ad12d97188a4870?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fsuperset",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/superset@sha256:976aaa3397a4d79e2cce7b4badb4f2b7792a52f3b6c757514ad12d97188a4870?arch=arm64&repository_url=docker.stackable.tech/stackable/superset"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "superset"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "451-stackable24.11.0-arm64",
+                    "product": {
+                      "name": "trino:451-stackable24.11.0-arm64",
+                      "product_id": "pkg:oci/trino@sha256%3Ac28c51c8977faa3ff43372b5c953d51aed8bd1abd079b12c5e42b8c81d91733a?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Ftrino",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/trino@sha256:c28c51c8977faa3ff43372b5c953d51aed8bd1abd079b12c5e42b8c81d91733a?arch=arm64&repository_url=docker.stackable.tech/stackable/trino"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "455-stackable24.11.0-arm64",
+                    "product": {
+                      "name": "trino:455-stackable24.11.0-arm64",
+                      "product_id": "pkg:oci/trino@sha256%3A25e2db9efda271ed6e73e49aae09f94b5124b8ad4b2d4a18f82ec0cfed741601?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Ftrino",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/trino@sha256:25e2db9efda271ed6e73e49aae09f94b5124b8ad4b2d4a18f82ec0cfed741601?arch=arm64&repository_url=docker.stackable.tech/stackable/trino"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "trino"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "3.9.2-stackable24.11.0-arm64",
+                    "product": {
+                      "name": "zookeeper:3.9.2-stackable24.11.0-arm64",
+                      "product_id": "pkg:oci/zookeeper@sha256%3A56c8600427b11f3cd796777401fac3607922b56dacdaa76510d26a27e7c8d92c?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fzookeeper",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/zookeeper@sha256:56c8600427b11f3cd796777401fac3607922b56dacdaa76510d26a27e7c8d92c?arch=arm64&repository_url=docker.stackable.tech/stackable/zookeeper"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "zookeeper"
+              }
+            ],
+            "category": "architecture",
+            "name": "arm64"
+          }
+        ],
+        "category": "vendor",
+        "name": "Stackable"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "1.5.1-20.el9",
+                "product": {
+                  "name": "pam:1.5.1-20.el9",
+                  "product_id": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=x86_64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=x86_64&distro=rhel-9.4&upstream=pam-1.5.1-20.el9.src.rpm"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "1.5.1-20.el9",
+                "product": {
+                  "name": "pam:1.5.1-20.el9",
+                  "product_id": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=aarch64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=aarch64&distro=rhel-9.4&upstream=pam-1.5.1-20.el9.src.rpm"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "pam"
+          }
+        ],
+        "category": "vendor",
+        "name": "redhat"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "1.5.1-15.el9",
+                "product": {
+                  "name": "pam:1.5.1-15.el9",
+                  "product_id": "pkg:rpm/rocky/pam@1.5.1-15.el9?arch=x86_64&upstream=pam-1.5.1-15.el9.src.rpm&distro=rocky-9.3",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/rocky/pam@1.5.1-15.el9?arch=x86_64&distro=rocky-9.3&upstream=pam-1.5.1-15.el9.src.rpm"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "1.5.1-19.el9",
+                "product": {
+                  "name": "pam:1.5.1-19.el9",
+                  "product_id": "pkg:rpm/rocky/pam@1.5.1-19.el9?arch=x86_64&upstream=pam-1.5.1-19.el9.src.rpm&distro=rocky-9.3",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/rocky/pam@1.5.1-19.el9?arch=x86_64&distro=rocky-9.3&upstream=pam-1.5.1-19.el9.src.rpm"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "1.5.1-15.el9",
+                "product": {
+                  "name": "pam:1.5.1-15.el9",
+                  "product_id": "pkg:rpm/rocky/pam@1.5.1-15.el9?arch=aarch64&upstream=pam-1.5.1-15.el9.src.rpm&distro=rocky-9.3",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/rocky/pam@1.5.1-15.el9?arch=aarch64&distro=rocky-9.3&upstream=pam-1.5.1-15.el9.src.rpm"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "1.5.1-19.el9",
+                "product": {
+                  "name": "pam:1.5.1-19.el9",
+                  "product_id": "pkg:rpm/rocky/pam@1.5.1-19.el9?arch=aarch64&upstream=pam-1.5.1-19.el9.src.rpm&distro=rocky-9.3",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/rocky/pam@1.5.1-19.el9?arch=aarch64&distro=rocky-9.3&upstream=pam-1.5.1-19.el9.src.rpm"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "pam"
+          }
+        ],
+        "category": "vendor",
+        "name": "rocky"
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@airflow:2.9.2-stackable24.11.0-amd64",
+          "product_id": "pam:1.5.1-20.el9@airflow:2.9.2-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=x86_64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/airflow@sha256%3A4cc969a29e3f878d7e2ad64441c797239c9f42eb6c01f9cb976031eaa45d7123?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fairflow"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@airflow:2.9.3-stackable24.11.0-amd64",
+          "product_id": "pam:1.5.1-20.el9@airflow:2.9.3-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=x86_64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/airflow@sha256%3A21686129e53bbd08e12a8208e3ede6f036456afa641f34cda210957fc64882ca?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fairflow"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@airflow:2.10.2-stackable24.11.0-amd64",
+          "product_id": "pam:1.5.1-20.el9@airflow:2.10.2-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=x86_64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/airflow@sha256%3A7b4bae0448ac63a6cc23b7d51f52c4071a1ecd9c7cecd730ee60092d0a62ee77?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fairflow"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@druid:26.0.0-stackable24.11.0-amd64",
+          "product_id": "pam:1.5.1-20.el9@druid:26.0.0-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=x86_64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/druid@sha256%3Ad10c7db72aea6220308f8bd124f811382e4f2b6318d6e1c85809b4d133493ed0?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fdruid"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@druid:30.0.0-stackable24.11.0-amd64",
+          "product_id": "pam:1.5.1-20.el9@druid:30.0.0-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=x86_64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/druid@sha256%3Af77a7590b0ac0c755f5d529f5773a50b95b1517a802c7ccf4ef02898ecc73ee8?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fdruid"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@hadoop:3.3.4-stackable24.11.0-amd64",
+          "product_id": "pam:1.5.1-20.el9@hadoop:3.3.4-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=x86_64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/hadoop@sha256%3A6e81c3fb7c7771255fb0f7d6ae4f08b8f098eaa40516478d311cca20a7d1df68?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fhadoop"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@hadoop:3.3.6-stackable24.11.0-amd64",
+          "product_id": "pam:1.5.1-20.el9@hadoop:3.3.6-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=x86_64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/hadoop@sha256%3Aee642dd614410cd02ccc847abc45c52298caa48080d91db924d6ae496ebe2cf5?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fhadoop"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@hadoop:3.4.0-stackable24.11.0-amd64",
+          "product_id": "pam:1.5.1-20.el9@hadoop:3.4.0-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=x86_64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/hadoop@sha256%3A86c7b8c7d4afb23098674cf16202285b5f2fad33c0189d9975c7843bb3679ff3?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fhadoop"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@hbase:2.4.18-stackable24.11.0-amd64",
+          "product_id": "pam:1.5.1-20.el9@hbase:2.4.18-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=x86_64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/hbase@sha256%3Af4a7f1264d24970eda7b2e774c621858fbacd967bf47c5c88318106226299d6f?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fhbase"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@hbase:2.6.0-stackable24.11.0-amd64",
+          "product_id": "pam:1.5.1-20.el9@hbase:2.6.0-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=x86_64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/hbase@sha256%3A64f10ff916d2447cc0ffe09b679213f40d60951d759ad0921a92caad653dd004?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fhbase"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@hive:4.0.0-stackable24.11.0-amd64",
+          "product_id": "pam:1.5.1-20.el9@hive:4.0.0-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=x86_64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/hive@sha256%3Ad3cb3b8f382a90b6cd28ff372c0d60d69e02e0a751b7f5b6791b4def4a1b10d7?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fhive"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@hive:3.1.3-stackable24.11.0-amd64",
+          "product_id": "pam:1.5.1-20.el9@hive:3.1.3-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=x86_64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/hive@sha256%3A03ee9018c9a8b60635a35ae742023f907d50c0e884465f3958fa8f6074c6b6e1?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fhive"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@kafka:3.7.1-stackable24.11.0-amd64",
+          "product_id": "pam:1.5.1-20.el9@kafka:3.7.1-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=x86_64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/kafka@sha256%3A98405a3917721c94322a663e9ca3ba8f973fc76a04da3de8cb20d95bdc8615ab?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fkafka"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@kafka:3.8.0-stackable24.11.0-amd64",
+          "product_id": "pam:1.5.1-20.el9@kafka:3.8.0-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=x86_64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/kafka@sha256%3A83040ba36b7ed90c5a5842d7457f830245862c0aa7e10f8ce0f989d5cf16a0d5?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fkafka"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-15.el9@krb5:1.21.1-stackable24.11.0-amd64",
+          "product_id": "pam:1.5.1-15.el9@krb5:1.21.1-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:rpm/rocky/pam@1.5.1-15.el9?arch=x86_64&upstream=pam-1.5.1-15.el9.src.rpm&distro=rocky-9.3",
+        "relates_to_product_reference": "pkg:oci/krb5@sha256%3Af18a1c04175723406d4df40dfca9c8599061dc434bddfd05ab388452f6723a09?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fkrb5"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-19.el9@krb5:1.21.1-stackable24.11.0-amd64",
+          "product_id": "pam:1.5.1-19.el9@krb5:1.21.1-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:rpm/rocky/pam@1.5.1-19.el9?arch=x86_64&upstream=pam-1.5.1-19.el9.src.rpm&distro=rocky-9.3",
+        "relates_to_product_reference": "pkg:oci/krb5@sha256%3Af18a1c04175723406d4df40dfca9c8599061dc434bddfd05ab388452f6723a09?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fkrb5"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@nifi:1.27.0-stackable24.11.0-amd64",
+          "product_id": "pam:1.5.1-20.el9@nifi:1.27.0-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=x86_64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/nifi@sha256%3Ac9a474a1b5a996b1767c59e5c9ef19ce4065ff2af61f92c2975af581f2564a86?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fnifi"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@nifi:2.0.0-stackable24.11.0-amd64",
+          "product_id": "pam:1.5.1-20.el9@nifi:2.0.0-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=x86_64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/nifi@sha256%3A67ebaa643354e493c74c0565309a6b476181be81b35e72796435b721b828153f?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fnifi"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@spark-k8s:3.5.1-stackable24.11.0-amd64",
+          "product_id": "pam:1.5.1-20.el9@spark-k8s:3.5.1-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=x86_64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/spark-k8s@sha256%3Ad35ff91e6cfbdac2263fac8bfe3040cf9f71adc815d106e5ca08699687564cad?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fspark-k8s"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@spark-k8s:3.5.2-stackable24.11.0-amd64",
+          "product_id": "pam:1.5.1-20.el9@spark-k8s:3.5.2-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=x86_64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/spark-k8s@sha256%3Af01e4c104208d1c1e925930c6c3d28b75808d8d7da81d40b9210beb17d785adb?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fspark-k8s"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@superset:4.0.2-stackable24.11.0-amd64",
+          "product_id": "pam:1.5.1-20.el9@superset:4.0.2-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=x86_64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/superset@sha256%3A199ba16551e358c1419292948d02d7ff6d48ec4a0781be6b0b60ccaf1db3d819?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fsuperset"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@trino:451-stackable24.11.0-amd64",
+          "product_id": "pam:1.5.1-20.el9@trino:451-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=x86_64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/trino@sha256%3A6c7662aad924c2cac95c37b91d08412de494221d8cf6471b73cb7e06964451d0?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Ftrino"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@trino:455-stackable24.11.0-amd64",
+          "product_id": "pam:1.5.1-20.el9@trino:455-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=x86_64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/trino@sha256%3Adb153220ae2b50a83353896d6028e0f79f030caac505e3aac866bfc16dbb522c?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Ftrino"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@zookeeper:3.9.2-stackable24.11.0-amd64",
+          "product_id": "pam:1.5.1-20.el9@zookeeper:3.9.2-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=x86_64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/zookeeper@sha256%3A5cbb9ccdbbeedb3a053040977c49fe259b082058b14a071141f769e50a1cbb45?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fzookeeper"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@airflow:2.9.2-stackable24.11.0-arm64",
+          "product_id": "pam:1.5.1-20.el9@airflow:2.9.2-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=aarch64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/airflow@sha256%3A299456dd13aaa7972dd416fcb703898d21f231008048ac2f62f79d98d2e74a03?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fairflow"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@airflow:2.9.3-stackable24.11.0-arm64",
+          "product_id": "pam:1.5.1-20.el9@airflow:2.9.3-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=aarch64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/airflow@sha256%3Ac3186e9947791e619f37cce9c05b6a3883e0b18b398e8b5e2a5f9206fa0b4931?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fairflow"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@airflow:2.10.2-stackable24.11.0-arm64",
+          "product_id": "pam:1.5.1-20.el9@airflow:2.10.2-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=aarch64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/airflow@sha256%3A7ba49daa51de899637d2da1e4473290683866f6b754ad392d30037972b856bc5?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fairflow"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@druid:26.0.0-stackable24.11.0-arm64",
+          "product_id": "pam:1.5.1-20.el9@druid:26.0.0-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=aarch64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/druid@sha256%3Ae08329c5bac56b4fa0272f6c20be21315b75a6cfe2ef23858ca63ed3c47f60ff?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fdruid"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@druid:30.0.0-stackable24.11.0-arm64",
+          "product_id": "pam:1.5.1-20.el9@druid:30.0.0-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=aarch64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/druid@sha256%3A1de30fad4dd0e085df048adfb95bb10e8787891ce014f26a4a096b55ddb317ac?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fdruid"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@hadoop:3.3.4-stackable24.11.0-arm64",
+          "product_id": "pam:1.5.1-20.el9@hadoop:3.3.4-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=aarch64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/hadoop@sha256%3A5fc1640aa7fda531d872585fe4f0af630f58e0b2e1ad0cde64e981d4ec380950?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fhadoop"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@hadoop:3.3.6-stackable24.11.0-arm64",
+          "product_id": "pam:1.5.1-20.el9@hadoop:3.3.6-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=aarch64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/hadoop@sha256%3Aa75adf0b32aa584c9c46b42ee82063f0e639781960a3bcbbe93e5983fe0d721d?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fhadoop"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@hadoop:3.4.0-stackable24.11.0-arm64",
+          "product_id": "pam:1.5.1-20.el9@hadoop:3.4.0-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=aarch64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/hadoop@sha256%3A01d09bba8144b968836977f70fd3ab4d1881ea8851b1ea8c0c34a4d293b515fe?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fhadoop"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@hbase:2.4.18-stackable24.11.0-arm64",
+          "product_id": "pam:1.5.1-20.el9@hbase:2.4.18-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=aarch64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/hbase@sha256%3Aeaf29c8a8f720be69658a76be01c58d6642478a75c8431c21e7096c3b0c3d7bc?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fhbase"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@hbase:2.6.0-stackable24.11.0-arm64",
+          "product_id": "pam:1.5.1-20.el9@hbase:2.6.0-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=aarch64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/hbase@sha256%3Afb4cb28ead856965e8eb759a90f150e2a3782a8c15cc349ecdb532b10362625a?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fhbase"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@hive:4.0.0-stackable24.11.0-arm64",
+          "product_id": "pam:1.5.1-20.el9@hive:4.0.0-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=aarch64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/hive@sha256%3A86ea1bf11df194c8f7cd3f2e098a9d9c467b74491b3fcbb140611643ec44c654?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fhive"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@hive:3.1.3-stackable24.11.0-arm64",
+          "product_id": "pam:1.5.1-20.el9@hive:3.1.3-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=aarch64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/hive@sha256%3A3a93eff4e4832050efb35c9ef823ddb69a6d3437f2ecc6125021f739574da8c5?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fhive"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@kafka:3.7.1-stackable24.11.0-arm64",
+          "product_id": "pam:1.5.1-20.el9@kafka:3.7.1-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=aarch64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/kafka@sha256%3A2bb9dc8b02e33042757f1f243dcd84ff656dc2433e1bda91371cfd23df0c34dc?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fkafka"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@kafka:3.8.0-stackable24.11.0-arm64",
+          "product_id": "pam:1.5.1-20.el9@kafka:3.8.0-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=aarch64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/kafka@sha256%3A9d82295b57ec26ade4c36977a63016adb91ceb826a274ec7e6cd920c5c28cffe?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fkafka"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-15.el9@krb5:1.21.1-stackable24.11.0-arm64",
+          "product_id": "pam:1.5.1-15.el9@krb5:1.21.1-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:rpm/rocky/pam@1.5.1-15.el9?arch=aarch64&upstream=pam-1.5.1-15.el9.src.rpm&distro=rocky-9.3",
+        "relates_to_product_reference": "pkg:oci/krb5@sha256%3Ad7c0d184d6b6f0317d3ee6924f5977165c228a185b6bc26b9f873664c70f0bfc?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fkrb5"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-19.el9@krb5:1.21.1-stackable24.11.0-arm64",
+          "product_id": "pam:1.5.1-19.el9@krb5:1.21.1-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:rpm/rocky/pam@1.5.1-19.el9?arch=aarch64&upstream=pam-1.5.1-19.el9.src.rpm&distro=rocky-9.3",
+        "relates_to_product_reference": "pkg:oci/krb5@sha256%3Ad7c0d184d6b6f0317d3ee6924f5977165c228a185b6bc26b9f873664c70f0bfc?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fkrb5"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@nifi:1.27.0-stackable24.11.0-arm64",
+          "product_id": "pam:1.5.1-20.el9@nifi:1.27.0-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=aarch64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/nifi@sha256%3A1f86ee007f7c1ca1b4e800e938a91eb5b647bccaeb550dda0099854f68d97bc6?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fnifi"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@nifi:2.0.0-stackable24.11.0-arm64",
+          "product_id": "pam:1.5.1-20.el9@nifi:2.0.0-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=aarch64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/nifi@sha256%3A08c9a57feb9046a8d1e8cdcb16ccf8df705a046a4e8bc5613e7f46d06d9ae1fe?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fnifi"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@spark-k8s:3.5.1-stackable24.11.0-arm64",
+          "product_id": "pam:1.5.1-20.el9@spark-k8s:3.5.1-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=aarch64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/spark-k8s@sha256%3Ab7ef02033cd695914910ae370794d1ddeac7e39f7a7bafacd8b4d0d8adb4a322?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fspark-k8s"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@spark-k8s:3.5.2-stackable24.11.0-arm64",
+          "product_id": "pam:1.5.1-20.el9@spark-k8s:3.5.2-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=aarch64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/spark-k8s@sha256%3A62dc1f56dd40bcb9009d8a805096ef2c81088527149806510b47d96d764cf92c?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fspark-k8s"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@superset:4.0.2-stackable24.11.0-arm64",
+          "product_id": "pam:1.5.1-20.el9@superset:4.0.2-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=aarch64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/superset@sha256%3A976aaa3397a4d79e2cce7b4badb4f2b7792a52f3b6c757514ad12d97188a4870?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fsuperset"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@trino:451-stackable24.11.0-arm64",
+          "product_id": "pam:1.5.1-20.el9@trino:451-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=aarch64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/trino@sha256%3Ac28c51c8977faa3ff43372b5c953d51aed8bd1abd079b12c5e42b8c81d91733a?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Ftrino"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@trino:455-stackable24.11.0-arm64",
+          "product_id": "pam:1.5.1-20.el9@trino:455-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=aarch64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/trino@sha256%3A25e2db9efda271ed6e73e49aae09f94b5124b8ad4b2d4a18f82ec0cfed741601?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Ftrino"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pam:1.5.1-20.el9@zookeeper:3.9.2-stackable24.11.0-arm64",
+          "product_id": "pam:1.5.1-20.el9@zookeeper:3.9.2-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:rpm/redhat/pam@1.5.1-20.el9?arch=aarch64&upstream=pam-1.5.1-20.el9.src.rpm&distro=rhel-9.4",
+        "relates_to_product_reference": "pkg:oci/zookeeper@sha256%3A56c8600427b11f3cd796777401fac3607922b56dacdaa76510d26a27e7c8d92c?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fzookeeper"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-10963",
+      "flags": [
+        {
+          "label": "vulnerable_code_cannot_be_controlled_by_adversary",
+          "product_ids": [
+            "pam:1.5.1-20.el9@airflow:2.9.2-stackable24.11.0-amd64",
+            "pam:1.5.1-20.el9@airflow:2.9.3-stackable24.11.0-amd64",
+            "pam:1.5.1-20.el9@airflow:2.10.2-stackable24.11.0-amd64",
+            "pam:1.5.1-20.el9@druid:26.0.0-stackable24.11.0-amd64",
+            "pam:1.5.1-20.el9@druid:30.0.0-stackable24.11.0-amd64",
+            "pam:1.5.1-20.el9@hadoop:3.3.4-stackable24.11.0-amd64",
+            "pam:1.5.1-20.el9@hadoop:3.3.6-stackable24.11.0-amd64",
+            "pam:1.5.1-20.el9@hadoop:3.4.0-stackable24.11.0-amd64",
+            "pam:1.5.1-20.el9@hbase:2.4.18-stackable24.11.0-amd64",
+            "pam:1.5.1-20.el9@hbase:2.6.0-stackable24.11.0-amd64",
+            "pam:1.5.1-20.el9@hive:4.0.0-stackable24.11.0-amd64",
+            "pam:1.5.1-20.el9@hive:3.1.3-stackable24.11.0-amd64",
+            "pam:1.5.1-20.el9@kafka:3.7.1-stackable24.11.0-amd64",
+            "pam:1.5.1-20.el9@kafka:3.8.0-stackable24.11.0-amd64",
+            "pam:1.5.1-15.el9@krb5:1.21.1-stackable24.11.0-amd64",
+            "pam:1.5.1-19.el9@krb5:1.21.1-stackable24.11.0-amd64",
+            "pam:1.5.1-20.el9@nifi:1.27.0-stackable24.11.0-amd64",
+            "pam:1.5.1-20.el9@nifi:2.0.0-stackable24.11.0-amd64",
+            "pam:1.5.1-20.el9@spark-k8s:3.5.1-stackable24.11.0-amd64",
+            "pam:1.5.1-20.el9@spark-k8s:3.5.2-stackable24.11.0-amd64",
+            "pam:1.5.1-20.el9@superset:4.0.2-stackable24.11.0-amd64",
+            "pam:1.5.1-20.el9@trino:451-stackable24.11.0-amd64",
+            "pam:1.5.1-20.el9@trino:455-stackable24.11.0-amd64",
+            "pam:1.5.1-20.el9@zookeeper:3.9.2-stackable24.11.0-amd64",
+            "pam:1.5.1-20.el9@airflow:2.9.2-stackable24.11.0-arm64",
+            "pam:1.5.1-20.el9@airflow:2.9.3-stackable24.11.0-arm64",
+            "pam:1.5.1-20.el9@airflow:2.10.2-stackable24.11.0-arm64",
+            "pam:1.5.1-20.el9@druid:26.0.0-stackable24.11.0-arm64",
+            "pam:1.5.1-20.el9@druid:30.0.0-stackable24.11.0-arm64",
+            "pam:1.5.1-20.el9@hadoop:3.3.4-stackable24.11.0-arm64",
+            "pam:1.5.1-20.el9@hadoop:3.3.6-stackable24.11.0-arm64",
+            "pam:1.5.1-20.el9@hadoop:3.4.0-stackable24.11.0-arm64",
+            "pam:1.5.1-20.el9@hbase:2.4.18-stackable24.11.0-arm64",
+            "pam:1.5.1-20.el9@hbase:2.6.0-stackable24.11.0-arm64",
+            "pam:1.5.1-20.el9@hive:4.0.0-stackable24.11.0-arm64",
+            "pam:1.5.1-20.el9@hive:3.1.3-stackable24.11.0-arm64",
+            "pam:1.5.1-20.el9@kafka:3.7.1-stackable24.11.0-arm64",
+            "pam:1.5.1-20.el9@kafka:3.8.0-stackable24.11.0-arm64",
+            "pam:1.5.1-15.el9@krb5:1.21.1-stackable24.11.0-arm64",
+            "pam:1.5.1-19.el9@krb5:1.21.1-stackable24.11.0-arm64",
+            "pam:1.5.1-20.el9@nifi:1.27.0-stackable24.11.0-arm64",
+            "pam:1.5.1-20.el9@nifi:2.0.0-stackable24.11.0-arm64",
+            "pam:1.5.1-20.el9@spark-k8s:3.5.1-stackable24.11.0-arm64",
+            "pam:1.5.1-20.el9@spark-k8s:3.5.2-stackable24.11.0-arm64",
+            "pam:1.5.1-20.el9@superset:4.0.2-stackable24.11.0-arm64",
+            "pam:1.5.1-20.el9@trino:451-stackable24.11.0-arm64",
+            "pam:1.5.1-20.el9@trino:455-stackable24.11.0-arm64",
+            "pam:1.5.1-20.el9@zookeeper:3.9.2-stackable24.11.0-arm64"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "A flaw was found in pam_access, where certain rules in its configuration file are mistakenly treated as hostnames. This vulnerability allows attackers to trick the system by pretending to be a trusted hostname, gaining unauthorized access. This issue poses a risk for systems that rely on this feature to control who can access certain services or terminals.",
+          "title": "CVE description"
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pam:1.5.1-20.el9@airflow:2.9.2-stackable24.11.0-amd64",
+          "pam:1.5.1-20.el9@airflow:2.9.3-stackable24.11.0-amd64",
+          "pam:1.5.1-20.el9@airflow:2.10.2-stackable24.11.0-amd64",
+          "pam:1.5.1-20.el9@druid:26.0.0-stackable24.11.0-amd64",
+          "pam:1.5.1-20.el9@druid:30.0.0-stackable24.11.0-amd64",
+          "pam:1.5.1-20.el9@hadoop:3.3.4-stackable24.11.0-amd64",
+          "pam:1.5.1-20.el9@hadoop:3.3.6-stackable24.11.0-amd64",
+          "pam:1.5.1-20.el9@hadoop:3.4.0-stackable24.11.0-amd64",
+          "pam:1.5.1-20.el9@hbase:2.4.18-stackable24.11.0-amd64",
+          "pam:1.5.1-20.el9@hbase:2.6.0-stackable24.11.0-amd64",
+          "pam:1.5.1-20.el9@hive:4.0.0-stackable24.11.0-amd64",
+          "pam:1.5.1-20.el9@hive:3.1.3-stackable24.11.0-amd64",
+          "pam:1.5.1-20.el9@kafka:3.7.1-stackable24.11.0-amd64",
+          "pam:1.5.1-20.el9@kafka:3.8.0-stackable24.11.0-amd64",
+          "pam:1.5.1-15.el9@krb5:1.21.1-stackable24.11.0-amd64",
+          "pam:1.5.1-19.el9@krb5:1.21.1-stackable24.11.0-amd64",
+          "pam:1.5.1-20.el9@nifi:1.27.0-stackable24.11.0-amd64",
+          "pam:1.5.1-20.el9@nifi:2.0.0-stackable24.11.0-amd64",
+          "pam:1.5.1-20.el9@spark-k8s:3.5.1-stackable24.11.0-amd64",
+          "pam:1.5.1-20.el9@spark-k8s:3.5.2-stackable24.11.0-amd64",
+          "pam:1.5.1-20.el9@superset:4.0.2-stackable24.11.0-amd64",
+          "pam:1.5.1-20.el9@trino:451-stackable24.11.0-amd64",
+          "pam:1.5.1-20.el9@trino:455-stackable24.11.0-amd64",
+          "pam:1.5.1-20.el9@zookeeper:3.9.2-stackable24.11.0-amd64",
+          "pam:1.5.1-20.el9@airflow:2.9.2-stackable24.11.0-arm64",
+          "pam:1.5.1-20.el9@airflow:2.9.3-stackable24.11.0-arm64",
+          "pam:1.5.1-20.el9@airflow:2.10.2-stackable24.11.0-arm64",
+          "pam:1.5.1-20.el9@druid:26.0.0-stackable24.11.0-arm64",
+          "pam:1.5.1-20.el9@druid:30.0.0-stackable24.11.0-arm64",
+          "pam:1.5.1-20.el9@hadoop:3.3.4-stackable24.11.0-arm64",
+          "pam:1.5.1-20.el9@hadoop:3.3.6-stackable24.11.0-arm64",
+          "pam:1.5.1-20.el9@hadoop:3.4.0-stackable24.11.0-arm64",
+          "pam:1.5.1-20.el9@hbase:2.4.18-stackable24.11.0-arm64",
+          "pam:1.5.1-20.el9@hbase:2.6.0-stackable24.11.0-arm64",
+          "pam:1.5.1-20.el9@hive:4.0.0-stackable24.11.0-arm64",
+          "pam:1.5.1-20.el9@hive:3.1.3-stackable24.11.0-arm64",
+          "pam:1.5.1-20.el9@kafka:3.7.1-stackable24.11.0-arm64",
+          "pam:1.5.1-20.el9@kafka:3.8.0-stackable24.11.0-arm64",
+          "pam:1.5.1-15.el9@krb5:1.21.1-stackable24.11.0-arm64",
+          "pam:1.5.1-19.el9@krb5:1.21.1-stackable24.11.0-arm64",
+          "pam:1.5.1-20.el9@nifi:1.27.0-stackable24.11.0-arm64",
+          "pam:1.5.1-20.el9@nifi:2.0.0-stackable24.11.0-arm64",
+          "pam:1.5.1-20.el9@spark-k8s:3.5.1-stackable24.11.0-arm64",
+          "pam:1.5.1-20.el9@spark-k8s:3.5.2-stackable24.11.0-arm64",
+          "pam:1.5.1-20.el9@superset:4.0.2-stackable24.11.0-arm64",
+          "pam:1.5.1-20.el9@trino:451-stackable24.11.0-arm64",
+          "pam:1.5.1-20.el9@trino:455-stackable24.11.0-arm64",
+          "pam:1.5.1-20.el9@zookeeper:3.9.2-stackable24.11.0-arm64"
+        ]
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "Security Advisory",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-10963"
+        }
+      ],
+      "title": "CVE-2024-10963"
+    }
+  ]
+}
