@@ -1,0 +1,968 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en-US",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to Stackable GmbH and provide a link to the original.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "product-security@stackable.tech",
+      "issuing_authority": "The Stackable Security Team is responsible for vulnerability handling across all Stackable offerings.",
+      "name": "Stackable GmbH",
+      "namespace": "https://www.stackable.tech/"
+    },
+    "title": "Stackable Security Advisory for: CVE-2024-47554",
+    "tracking": {
+      "current_release_date": "2024-12-10T15:29:24.766538Z",
+      "generator": {
+        "engine": {
+          "name": "SecObserve",
+          "version": "1.22.4"
+        }
+      },
+      "id": "STACKSA_2024_0113_0001",
+      "initial_release_date": "2024-12-10T15:29:24.766538Z",
+      "revision_history": [
+        {
+          "date": "2024-12-10T15:29:24.766538Z",
+          "number": "1",
+          "summary": "Initial release"
+        }
+      ],
+      "status": "draft",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "26.0.0-stackable24.11.0-amd64",
+                    "product": {
+                      "name": "druid:26.0.0-stackable24.11.0-amd64",
+                      "product_id": "pkg:oci/druid@sha256%3Ad10c7db72aea6220308f8bd124f811382e4f2b6318d6e1c85809b4d133493ed0?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fdruid",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/druid@sha256:d10c7db72aea6220308f8bd124f811382e4f2b6318d6e1c85809b4d133493ed0?arch=amd64&repository_url=docker.stackable.tech/stackable/druid"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "30.0.0-stackable24.11.0-amd64",
+                    "product": {
+                      "name": "druid:30.0.0-stackable24.11.0-amd64",
+                      "product_id": "pkg:oci/druid@sha256%3Af77a7590b0ac0c755f5d529f5773a50b95b1517a802c7ccf4ef02898ecc73ee8?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fdruid",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/druid@sha256:f77a7590b0ac0c755f5d529f5773a50b95b1517a802c7ccf4ef02898ecc73ee8?arch=amd64&repository_url=docker.stackable.tech/stackable/druid"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "druid"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "3.3.4-stackable24.11.0-amd64",
+                    "product": {
+                      "name": "hadoop:3.3.4-stackable24.11.0-amd64",
+                      "product_id": "pkg:oci/hadoop@sha256%3A6e81c3fb7c7771255fb0f7d6ae4f08b8f098eaa40516478d311cca20a7d1df68?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fhadoop",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/hadoop@sha256:6e81c3fb7c7771255fb0f7d6ae4f08b8f098eaa40516478d311cca20a7d1df68?arch=amd64&repository_url=docker.stackable.tech/stackable/hadoop"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "3.3.6-stackable24.11.0-amd64",
+                    "product": {
+                      "name": "hadoop:3.3.6-stackable24.11.0-amd64",
+                      "product_id": "pkg:oci/hadoop@sha256%3Aee642dd614410cd02ccc847abc45c52298caa48080d91db924d6ae496ebe2cf5?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fhadoop",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/hadoop@sha256:ee642dd614410cd02ccc847abc45c52298caa48080d91db924d6ae496ebe2cf5?arch=amd64&repository_url=docker.stackable.tech/stackable/hadoop"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "hadoop"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "4.0.0-stackable24.11.0-amd64",
+                    "product": {
+                      "name": "hive:4.0.0-stackable24.11.0-amd64",
+                      "product_id": "pkg:oci/hive@sha256%3Ad3cb3b8f382a90b6cd28ff372c0d60d69e02e0a751b7f5b6791b4def4a1b10d7?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fhive",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/hive@sha256:d3cb3b8f382a90b6cd28ff372c0d60d69e02e0a751b7f5b6791b4def4a1b10d7?arch=amd64&repository_url=docker.stackable.tech/stackable/hive"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "3.1.3-stackable24.11.0-amd64",
+                    "product": {
+                      "name": "hive:3.1.3-stackable24.11.0-amd64",
+                      "product_id": "pkg:oci/hive@sha256%3A03ee9018c9a8b60635a35ae742023f907d50c0e884465f3958fa8f6074c6b6e1?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fhive",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/hive@sha256:03ee9018c9a8b60635a35ae742023f907d50c0e884465f3958fa8f6074c6b6e1?arch=amd64&repository_url=docker.stackable.tech/stackable/hive"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "hive"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "3.7.1-stackable24.11.0-amd64",
+                    "product": {
+                      "name": "kafka:3.7.1-stackable24.11.0-amd64",
+                      "product_id": "pkg:oci/kafka@sha256%3A98405a3917721c94322a663e9ca3ba8f973fc76a04da3de8cb20d95bdc8615ab?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fkafka",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/kafka@sha256:98405a3917721c94322a663e9ca3ba8f973fc76a04da3de8cb20d95bdc8615ab?arch=amd64&repository_url=docker.stackable.tech/stackable/kafka"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "3.8.0-stackable24.11.0-amd64",
+                    "product": {
+                      "name": "kafka:3.8.0-stackable24.11.0-amd64",
+                      "product_id": "pkg:oci/kafka@sha256%3A83040ba36b7ed90c5a5842d7457f830245862c0aa7e10f8ce0f989d5cf16a0d5?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fkafka",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/kafka@sha256:83040ba36b7ed90c5a5842d7457f830245862c0aa7e10f8ce0f989d5cf16a0d5?arch=amd64&repository_url=docker.stackable.tech/stackable/kafka"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "kafka"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "1.27.0-stackable24.11.0-amd64",
+                    "product": {
+                      "name": "nifi:1.27.0-stackable24.11.0-amd64",
+                      "product_id": "pkg:oci/nifi@sha256%3Ac9a474a1b5a996b1767c59e5c9ef19ce4065ff2af61f92c2975af581f2564a86?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fnifi",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/nifi@sha256:c9a474a1b5a996b1767c59e5c9ef19ce4065ff2af61f92c2975af581f2564a86?arch=amd64&repository_url=docker.stackable.tech/stackable/nifi"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "nifi"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "3.5.1-stackable24.11.0-amd64",
+                    "product": {
+                      "name": "spark-k8s:3.5.1-stackable24.11.0-amd64",
+                      "product_id": "pkg:oci/spark-k8s@sha256%3Ad35ff91e6cfbdac2263fac8bfe3040cf9f71adc815d106e5ca08699687564cad?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fspark-k8s",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/spark-k8s@sha256:d35ff91e6cfbdac2263fac8bfe3040cf9f71adc815d106e5ca08699687564cad?arch=amd64&repository_url=docker.stackable.tech/stackable/spark-k8s"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "3.5.2-stackable24.11.0-amd64",
+                    "product": {
+                      "name": "spark-k8s:3.5.2-stackable24.11.0-amd64",
+                      "product_id": "pkg:oci/spark-k8s@sha256%3Af01e4c104208d1c1e925930c6c3d28b75808d8d7da81d40b9210beb17d785adb?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fspark-k8s",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/spark-k8s@sha256:f01e4c104208d1c1e925930c6c3d28b75808d8d7da81d40b9210beb17d785adb?arch=amd64&repository_url=docker.stackable.tech/stackable/spark-k8s"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "spark-k8s"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "3.9.2-stackable24.11.0-amd64",
+                    "product": {
+                      "name": "zookeeper:3.9.2-stackable24.11.0-amd64",
+                      "product_id": "pkg:oci/zookeeper@sha256%3A5cbb9ccdbbeedb3a053040977c49fe259b082058b14a071141f769e50a1cbb45?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fzookeeper",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/zookeeper@sha256:5cbb9ccdbbeedb3a053040977c49fe259b082058b14a071141f769e50a1cbb45?arch=amd64&repository_url=docker.stackable.tech/stackable/zookeeper"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "zookeeper"
+              }
+            ],
+            "category": "architecture",
+            "name": "amd64"
+          },
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "26.0.0-stackable24.11.0-arm64",
+                    "product": {
+                      "name": "druid:26.0.0-stackable24.11.0-arm64",
+                      "product_id": "pkg:oci/druid@sha256%3Ae08329c5bac56b4fa0272f6c20be21315b75a6cfe2ef23858ca63ed3c47f60ff?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fdruid",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/druid@sha256:e08329c5bac56b4fa0272f6c20be21315b75a6cfe2ef23858ca63ed3c47f60ff?arch=arm64&repository_url=docker.stackable.tech/stackable/druid"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "30.0.0-stackable24.11.0-arm64",
+                    "product": {
+                      "name": "druid:30.0.0-stackable24.11.0-arm64",
+                      "product_id": "pkg:oci/druid@sha256%3A1de30fad4dd0e085df048adfb95bb10e8787891ce014f26a4a096b55ddb317ac?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fdruid",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/druid@sha256:1de30fad4dd0e085df048adfb95bb10e8787891ce014f26a4a096b55ddb317ac?arch=arm64&repository_url=docker.stackable.tech/stackable/druid"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "druid"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "3.3.4-stackable24.11.0-arm64",
+                    "product": {
+                      "name": "hadoop:3.3.4-stackable24.11.0-arm64",
+                      "product_id": "pkg:oci/hadoop@sha256%3A5fc1640aa7fda531d872585fe4f0af630f58e0b2e1ad0cde64e981d4ec380950?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fhadoop",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/hadoop@sha256:5fc1640aa7fda531d872585fe4f0af630f58e0b2e1ad0cde64e981d4ec380950?arch=arm64&repository_url=docker.stackable.tech/stackable/hadoop"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "3.3.6-stackable24.11.0-arm64",
+                    "product": {
+                      "name": "hadoop:3.3.6-stackable24.11.0-arm64",
+                      "product_id": "pkg:oci/hadoop@sha256%3Aa75adf0b32aa584c9c46b42ee82063f0e639781960a3bcbbe93e5983fe0d721d?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fhadoop",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/hadoop@sha256:a75adf0b32aa584c9c46b42ee82063f0e639781960a3bcbbe93e5983fe0d721d?arch=arm64&repository_url=docker.stackable.tech/stackable/hadoop"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "hadoop"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "4.0.0-stackable24.11.0-arm64",
+                    "product": {
+                      "name": "hive:4.0.0-stackable24.11.0-arm64",
+                      "product_id": "pkg:oci/hive@sha256%3A86ea1bf11df194c8f7cd3f2e098a9d9c467b74491b3fcbb140611643ec44c654?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fhive",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/hive@sha256:86ea1bf11df194c8f7cd3f2e098a9d9c467b74491b3fcbb140611643ec44c654?arch=arm64&repository_url=docker.stackable.tech/stackable/hive"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "3.1.3-stackable24.11.0-arm64",
+                    "product": {
+                      "name": "hive:3.1.3-stackable24.11.0-arm64",
+                      "product_id": "pkg:oci/hive@sha256%3A3a93eff4e4832050efb35c9ef823ddb69a6d3437f2ecc6125021f739574da8c5?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fhive",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/hive@sha256:3a93eff4e4832050efb35c9ef823ddb69a6d3437f2ecc6125021f739574da8c5?arch=arm64&repository_url=docker.stackable.tech/stackable/hive"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "hive"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "3.7.1-stackable24.11.0-arm64",
+                    "product": {
+                      "name": "kafka:3.7.1-stackable24.11.0-arm64",
+                      "product_id": "pkg:oci/kafka@sha256%3A2bb9dc8b02e33042757f1f243dcd84ff656dc2433e1bda91371cfd23df0c34dc?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fkafka",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/kafka@sha256:2bb9dc8b02e33042757f1f243dcd84ff656dc2433e1bda91371cfd23df0c34dc?arch=arm64&repository_url=docker.stackable.tech/stackable/kafka"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "3.8.0-stackable24.11.0-arm64",
+                    "product": {
+                      "name": "kafka:3.8.0-stackable24.11.0-arm64",
+                      "product_id": "pkg:oci/kafka@sha256%3A9d82295b57ec26ade4c36977a63016adb91ceb826a274ec7e6cd920c5c28cffe?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fkafka",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/kafka@sha256:9d82295b57ec26ade4c36977a63016adb91ceb826a274ec7e6cd920c5c28cffe?arch=arm64&repository_url=docker.stackable.tech/stackable/kafka"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "kafka"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "1.27.0-stackable24.11.0-arm64",
+                    "product": {
+                      "name": "nifi:1.27.0-stackable24.11.0-arm64",
+                      "product_id": "pkg:oci/nifi@sha256%3A1f86ee007f7c1ca1b4e800e938a91eb5b647bccaeb550dda0099854f68d97bc6?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fnifi",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/nifi@sha256:1f86ee007f7c1ca1b4e800e938a91eb5b647bccaeb550dda0099854f68d97bc6?arch=arm64&repository_url=docker.stackable.tech/stackable/nifi"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "nifi"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "3.5.1-stackable24.11.0-arm64",
+                    "product": {
+                      "name": "spark-k8s:3.5.1-stackable24.11.0-arm64",
+                      "product_id": "pkg:oci/spark-k8s@sha256%3Ab7ef02033cd695914910ae370794d1ddeac7e39f7a7bafacd8b4d0d8adb4a322?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fspark-k8s",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/spark-k8s@sha256:b7ef02033cd695914910ae370794d1ddeac7e39f7a7bafacd8b4d0d8adb4a322?arch=arm64&repository_url=docker.stackable.tech/stackable/spark-k8s"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "3.5.2-stackable24.11.0-arm64",
+                    "product": {
+                      "name": "spark-k8s:3.5.2-stackable24.11.0-arm64",
+                      "product_id": "pkg:oci/spark-k8s@sha256%3A62dc1f56dd40bcb9009d8a805096ef2c81088527149806510b47d96d764cf92c?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fspark-k8s",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/spark-k8s@sha256:62dc1f56dd40bcb9009d8a805096ef2c81088527149806510b47d96d764cf92c?arch=arm64&repository_url=docker.stackable.tech/stackable/spark-k8s"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "spark-k8s"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "3.9.2-stackable24.11.0-arm64",
+                    "product": {
+                      "name": "zookeeper:3.9.2-stackable24.11.0-arm64",
+                      "product_id": "pkg:oci/zookeeper@sha256%3A56c8600427b11f3cd796777401fac3607922b56dacdaa76510d26a27e7c8d92c?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fzookeeper",
+                      "product_identification_helper": {
+                        "purl": "pkg:oci/zookeeper@sha256:56c8600427b11f3cd796777401fac3607922b56dacdaa76510d26a27e7c8d92c?arch=arm64&repository_url=docker.stackable.tech/stackable/zookeeper"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "zookeeper"
+              }
+            ],
+            "category": "architecture",
+            "name": "arm64"
+          }
+        ],
+        "category": "vendor",
+        "name": "Stackable"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "2.11.0",
+                "product": {
+                  "name": "commons-io:2.11.0",
+                  "product_id": "pkg:maven/commons-io/commons-io@2.11.0?type=jar",
+                  "product_identification_helper": {
+                    "purl": "pkg:maven/commons-io/commons-io@2.11.0?type=jar"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2.4",
+                "product": {
+                  "name": "commons-io:2.4",
+                  "product_id": "pkg:maven/commons-io/commons-io@2.4",
+                  "product_identification_helper": {
+                    "purl": "pkg:maven/commons-io/commons-io@2.4"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2.6",
+                "product": {
+                  "name": "commons-io:2.6",
+                  "product_id": "pkg:maven/commons-io/commons-io@2.6",
+                  "product_identification_helper": {
+                    "purl": "pkg:maven/commons-io/commons-io@2.6"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2.8.0",
+                "product": {
+                  "name": "commons-io:2.8.0",
+                  "product_id": "pkg:maven/commons-io/commons-io@2.8.0",
+                  "product_identification_helper": {
+                    "purl": "pkg:maven/commons-io/commons-io@2.8.0"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2.8.0",
+                "product": {
+                  "name": "commons-io:2.8.0",
+                  "product_id": "pkg:maven/commons-io/commons-io@2.8.0?type=jar",
+                  "product_identification_helper": {
+                    "purl": "pkg:maven/commons-io/commons-io@2.8.0?type=jar"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2.5",
+                "product": {
+                  "name": "commons-io:2.5",
+                  "product_id": "pkg:maven/commons-io/commons-io@2.5?type=jar",
+                  "product_identification_helper": {
+                    "purl": "pkg:maven/commons-io/commons-io@2.5?type=jar"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2.11.0",
+                "product": {
+                  "name": "commons-io:2.11.0",
+                  "product_id": "pkg:maven/commons-io/commons-io@2.11.0",
+                  "product_identification_helper": {
+                    "purl": "pkg:maven/commons-io/commons-io@2.11.0"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2.13.0",
+                "product": {
+                  "name": "commons-io:2.13.0",
+                  "product_id": "pkg:maven/commons-io/commons-io@2.13.0?type=jar",
+                  "product_identification_helper": {
+                    "purl": "pkg:maven/commons-io/commons-io@2.13.0?type=jar"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "commons-io"
+          }
+        ],
+        "category": "vendor",
+        "name": "commons-io"
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.11.0@druid:26.0.0-stackable24.11.0-amd64",
+          "product_id": "commons-io:2.11.0@druid:26.0.0-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.11.0?type=jar",
+        "relates_to_product_reference": "pkg:oci/druid@sha256%3Ad10c7db72aea6220308f8bd124f811382e4f2b6318d6e1c85809b4d133493ed0?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fdruid"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.4@druid:26.0.0-stackable24.11.0-amd64",
+          "product_id": "commons-io:2.4@druid:26.0.0-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.4",
+        "relates_to_product_reference": "pkg:oci/druid@sha256%3Ad10c7db72aea6220308f8bd124f811382e4f2b6318d6e1c85809b4d133493ed0?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fdruid"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.6@druid:26.0.0-stackable24.11.0-amd64",
+          "product_id": "commons-io:2.6@druid:26.0.0-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.6",
+        "relates_to_product_reference": "pkg:oci/druid@sha256%3Ad10c7db72aea6220308f8bd124f811382e4f2b6318d6e1c85809b4d133493ed0?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fdruid"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.11.0@druid:30.0.0-stackable24.11.0-amd64",
+          "product_id": "commons-io:2.11.0@druid:30.0.0-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.11.0?type=jar",
+        "relates_to_product_reference": "pkg:oci/druid@sha256%3Af77a7590b0ac0c755f5d529f5773a50b95b1517a802c7ccf4ef02898ecc73ee8?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fdruid"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.8.0@druid:30.0.0-stackable24.11.0-amd64",
+          "product_id": "commons-io:2.8.0@druid:30.0.0-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.8.0",
+        "relates_to_product_reference": "pkg:oci/druid@sha256%3Af77a7590b0ac0c755f5d529f5773a50b95b1517a802c7ccf4ef02898ecc73ee8?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fdruid"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.8.0@hadoop:3.3.4-stackable24.11.0-amd64",
+          "product_id": "commons-io:2.8.0@hadoop:3.3.4-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.8.0?type=jar",
+        "relates_to_product_reference": "pkg:oci/hadoop@sha256%3A6e81c3fb7c7771255fb0f7d6ae4f08b8f098eaa40516478d311cca20a7d1df68?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fhadoop"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.8.0@hadoop:3.3.6-stackable24.11.0-amd64",
+          "product_id": "commons-io:2.8.0@hadoop:3.3.6-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.8.0?type=jar",
+        "relates_to_product_reference": "pkg:oci/hadoop@sha256%3Aee642dd614410cd02ccc847abc45c52298caa48080d91db924d6ae496ebe2cf5?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fhadoop"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.8.0@hive:4.0.0-stackable24.11.0-amd64",
+          "product_id": "commons-io:2.8.0@hive:4.0.0-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.8.0?type=jar",
+        "relates_to_product_reference": "pkg:oci/hive@sha256%3Ad3cb3b8f382a90b6cd28ff372c0d60d69e02e0a751b7f5b6791b4def4a1b10d7?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fhive"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.5@hive:3.1.3-stackable24.11.0-amd64",
+          "product_id": "commons-io:2.5@hive:3.1.3-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.5?type=jar",
+        "relates_to_product_reference": "pkg:oci/hive@sha256%3A03ee9018c9a8b60635a35ae742023f907d50c0e884465f3958fa8f6074c6b6e1?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fhive"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.8.0@hive:3.1.3-stackable24.11.0-amd64",
+          "product_id": "commons-io:2.8.0@hive:3.1.3-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.8.0?type=jar",
+        "relates_to_product_reference": "pkg:oci/hive@sha256%3A03ee9018c9a8b60635a35ae742023f907d50c0e884465f3958fa8f6074c6b6e1?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fhive"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.11.0@kafka:3.7.1-stackable24.11.0-amd64",
+          "product_id": "commons-io:2.11.0@kafka:3.7.1-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.11.0?type=jar",
+        "relates_to_product_reference": "pkg:oci/kafka@sha256%3A98405a3917721c94322a663e9ca3ba8f973fc76a04da3de8cb20d95bdc8615ab?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fkafka"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.11.0@kafka:3.8.0-stackable24.11.0-amd64",
+          "product_id": "commons-io:2.11.0@kafka:3.8.0-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.11.0?type=jar",
+        "relates_to_product_reference": "pkg:oci/kafka@sha256%3A83040ba36b7ed90c5a5842d7457f830245862c0aa7e10f8ce0f989d5cf16a0d5?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fkafka"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.8.0@nifi:1.27.0-stackable24.11.0-amd64",
+          "product_id": "commons-io:2.8.0@nifi:1.27.0-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.8.0",
+        "relates_to_product_reference": "pkg:oci/nifi@sha256%3Ac9a474a1b5a996b1767c59e5c9ef19ce4065ff2af61f92c2975af581f2564a86?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fnifi"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.11.0@spark-k8s:3.5.1-stackable24.11.0-amd64",
+          "product_id": "commons-io:2.11.0@spark-k8s:3.5.1-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.11.0",
+        "relates_to_product_reference": "pkg:oci/spark-k8s@sha256%3Ad35ff91e6cfbdac2263fac8bfe3040cf9f71adc815d106e5ca08699687564cad?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fspark-k8s"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.13.0@spark-k8s:3.5.1-stackable24.11.0-amd64",
+          "product_id": "commons-io:2.13.0@spark-k8s:3.5.1-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.13.0?type=jar",
+        "relates_to_product_reference": "pkg:oci/spark-k8s@sha256%3Ad35ff91e6cfbdac2263fac8bfe3040cf9f71adc815d106e5ca08699687564cad?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fspark-k8s"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.8.0@spark-k8s:3.5.1-stackable24.11.0-amd64",
+          "product_id": "commons-io:2.8.0@spark-k8s:3.5.1-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.8.0",
+        "relates_to_product_reference": "pkg:oci/spark-k8s@sha256%3Ad35ff91e6cfbdac2263fac8bfe3040cf9f71adc815d106e5ca08699687564cad?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fspark-k8s"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.11.0@spark-k8s:3.5.2-stackable24.11.0-amd64",
+          "product_id": "commons-io:2.11.0@spark-k8s:3.5.2-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.11.0",
+        "relates_to_product_reference": "pkg:oci/spark-k8s@sha256%3Af01e4c104208d1c1e925930c6c3d28b75808d8d7da81d40b9210beb17d785adb?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fspark-k8s"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.8.0@spark-k8s:3.5.2-stackable24.11.0-amd64",
+          "product_id": "commons-io:2.8.0@spark-k8s:3.5.2-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.8.0",
+        "relates_to_product_reference": "pkg:oci/spark-k8s@sha256%3Af01e4c104208d1c1e925930c6c3d28b75808d8d7da81d40b9210beb17d785adb?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fspark-k8s"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.11.0@zookeeper:3.9.2-stackable24.11.0-amd64",
+          "product_id": "commons-io:2.11.0@zookeeper:3.9.2-stackable24.11.0-amd64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.11.0?type=jar",
+        "relates_to_product_reference": "pkg:oci/zookeeper@sha256%3A5cbb9ccdbbeedb3a053040977c49fe259b082058b14a071141f769e50a1cbb45?arch=amd64&repository_url=docker.stackable.tech%2Fstackable%2Fzookeeper"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.11.0@druid:26.0.0-stackable24.11.0-arm64",
+          "product_id": "commons-io:2.11.0@druid:26.0.0-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.11.0?type=jar",
+        "relates_to_product_reference": "pkg:oci/druid@sha256%3Ae08329c5bac56b4fa0272f6c20be21315b75a6cfe2ef23858ca63ed3c47f60ff?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fdruid"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.4@druid:26.0.0-stackable24.11.0-arm64",
+          "product_id": "commons-io:2.4@druid:26.0.0-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.4",
+        "relates_to_product_reference": "pkg:oci/druid@sha256%3Ae08329c5bac56b4fa0272f6c20be21315b75a6cfe2ef23858ca63ed3c47f60ff?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fdruid"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.6@druid:26.0.0-stackable24.11.0-arm64",
+          "product_id": "commons-io:2.6@druid:26.0.0-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.6",
+        "relates_to_product_reference": "pkg:oci/druid@sha256%3Ae08329c5bac56b4fa0272f6c20be21315b75a6cfe2ef23858ca63ed3c47f60ff?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fdruid"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.11.0@druid:30.0.0-stackable24.11.0-arm64",
+          "product_id": "commons-io:2.11.0@druid:30.0.0-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.11.0?type=jar",
+        "relates_to_product_reference": "pkg:oci/druid@sha256%3A1de30fad4dd0e085df048adfb95bb10e8787891ce014f26a4a096b55ddb317ac?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fdruid"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.8.0@druid:30.0.0-stackable24.11.0-arm64",
+          "product_id": "commons-io:2.8.0@druid:30.0.0-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.8.0",
+        "relates_to_product_reference": "pkg:oci/druid@sha256%3A1de30fad4dd0e085df048adfb95bb10e8787891ce014f26a4a096b55ddb317ac?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fdruid"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.8.0@hadoop:3.3.4-stackable24.11.0-arm64",
+          "product_id": "commons-io:2.8.0@hadoop:3.3.4-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.8.0?type=jar",
+        "relates_to_product_reference": "pkg:oci/hadoop@sha256%3A5fc1640aa7fda531d872585fe4f0af630f58e0b2e1ad0cde64e981d4ec380950?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fhadoop"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.8.0@hadoop:3.3.6-stackable24.11.0-arm64",
+          "product_id": "commons-io:2.8.0@hadoop:3.3.6-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.8.0?type=jar",
+        "relates_to_product_reference": "pkg:oci/hadoop@sha256%3Aa75adf0b32aa584c9c46b42ee82063f0e639781960a3bcbbe93e5983fe0d721d?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fhadoop"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.8.0@hive:4.0.0-stackable24.11.0-arm64",
+          "product_id": "commons-io:2.8.0@hive:4.0.0-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.8.0?type=jar",
+        "relates_to_product_reference": "pkg:oci/hive@sha256%3A86ea1bf11df194c8f7cd3f2e098a9d9c467b74491b3fcbb140611643ec44c654?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fhive"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.5@hive:3.1.3-stackable24.11.0-arm64",
+          "product_id": "commons-io:2.5@hive:3.1.3-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.5?type=jar",
+        "relates_to_product_reference": "pkg:oci/hive@sha256%3A3a93eff4e4832050efb35c9ef823ddb69a6d3437f2ecc6125021f739574da8c5?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fhive"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.8.0@hive:3.1.3-stackable24.11.0-arm64",
+          "product_id": "commons-io:2.8.0@hive:3.1.3-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.8.0?type=jar",
+        "relates_to_product_reference": "pkg:oci/hive@sha256%3A3a93eff4e4832050efb35c9ef823ddb69a6d3437f2ecc6125021f739574da8c5?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fhive"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.11.0@kafka:3.7.1-stackable24.11.0-arm64",
+          "product_id": "commons-io:2.11.0@kafka:3.7.1-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.11.0?type=jar",
+        "relates_to_product_reference": "pkg:oci/kafka@sha256%3A2bb9dc8b02e33042757f1f243dcd84ff656dc2433e1bda91371cfd23df0c34dc?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fkafka"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.11.0@kafka:3.8.0-stackable24.11.0-arm64",
+          "product_id": "commons-io:2.11.0@kafka:3.8.0-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.11.0?type=jar",
+        "relates_to_product_reference": "pkg:oci/kafka@sha256%3A9d82295b57ec26ade4c36977a63016adb91ceb826a274ec7e6cd920c5c28cffe?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fkafka"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.8.0@nifi:1.27.0-stackable24.11.0-arm64",
+          "product_id": "commons-io:2.8.0@nifi:1.27.0-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.8.0",
+        "relates_to_product_reference": "pkg:oci/nifi@sha256%3A1f86ee007f7c1ca1b4e800e938a91eb5b647bccaeb550dda0099854f68d97bc6?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fnifi"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.11.0@spark-k8s:3.5.1-stackable24.11.0-arm64",
+          "product_id": "commons-io:2.11.0@spark-k8s:3.5.1-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.11.0",
+        "relates_to_product_reference": "pkg:oci/spark-k8s@sha256%3Ab7ef02033cd695914910ae370794d1ddeac7e39f7a7bafacd8b4d0d8adb4a322?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fspark-k8s"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.13.0@spark-k8s:3.5.1-stackable24.11.0-arm64",
+          "product_id": "commons-io:2.13.0@spark-k8s:3.5.1-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.13.0?type=jar",
+        "relates_to_product_reference": "pkg:oci/spark-k8s@sha256%3Ab7ef02033cd695914910ae370794d1ddeac7e39f7a7bafacd8b4d0d8adb4a322?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fspark-k8s"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.8.0@spark-k8s:3.5.1-stackable24.11.0-arm64",
+          "product_id": "commons-io:2.8.0@spark-k8s:3.5.1-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.8.0",
+        "relates_to_product_reference": "pkg:oci/spark-k8s@sha256%3Ab7ef02033cd695914910ae370794d1ddeac7e39f7a7bafacd8b4d0d8adb4a322?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fspark-k8s"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.11.0@spark-k8s:3.5.2-stackable24.11.0-arm64",
+          "product_id": "commons-io:2.11.0@spark-k8s:3.5.2-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.11.0",
+        "relates_to_product_reference": "pkg:oci/spark-k8s@sha256%3A62dc1f56dd40bcb9009d8a805096ef2c81088527149806510b47d96d764cf92c?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fspark-k8s"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.8.0@spark-k8s:3.5.2-stackable24.11.0-arm64",
+          "product_id": "commons-io:2.8.0@spark-k8s:3.5.2-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.8.0",
+        "relates_to_product_reference": "pkg:oci/spark-k8s@sha256%3A62dc1f56dd40bcb9009d8a805096ef2c81088527149806510b47d96d764cf92c?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fspark-k8s"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "commons-io:2.11.0@zookeeper:3.9.2-stackable24.11.0-arm64",
+          "product_id": "commons-io:2.11.0@zookeeper:3.9.2-stackable24.11.0-arm64"
+        },
+        "product_reference": "pkg:maven/commons-io/commons-io@2.11.0?type=jar",
+        "relates_to_product_reference": "pkg:oci/zookeeper@sha256%3A56c8600427b11f3cd796777401fac3607922b56dacdaa76510d26a27e7c8d92c?arch=arm64&repository_url=docker.stackable.tech%2Fstackable%2Fzookeeper"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-47554",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "commons-io:2.11.0@druid:26.0.0-stackable24.11.0-amd64",
+            "commons-io:2.4@druid:26.0.0-stackable24.11.0-amd64",
+            "commons-io:2.6@druid:26.0.0-stackable24.11.0-amd64",
+            "commons-io:2.11.0@druid:30.0.0-stackable24.11.0-amd64",
+            "commons-io:2.8.0@druid:30.0.0-stackable24.11.0-amd64",
+            "commons-io:2.8.0@hadoop:3.3.4-stackable24.11.0-amd64",
+            "commons-io:2.8.0@hadoop:3.3.6-stackable24.11.0-amd64",
+            "commons-io:2.8.0@hive:4.0.0-stackable24.11.0-amd64",
+            "commons-io:2.5@hive:3.1.3-stackable24.11.0-amd64",
+            "commons-io:2.8.0@hive:3.1.3-stackable24.11.0-amd64",
+            "commons-io:2.11.0@kafka:3.7.1-stackable24.11.0-amd64",
+            "commons-io:2.11.0@kafka:3.8.0-stackable24.11.0-amd64",
+            "commons-io:2.8.0@nifi:1.27.0-stackable24.11.0-amd64",
+            "commons-io:2.11.0@spark-k8s:3.5.1-stackable24.11.0-amd64",
+            "commons-io:2.13.0@spark-k8s:3.5.1-stackable24.11.0-amd64",
+            "commons-io:2.8.0@spark-k8s:3.5.1-stackable24.11.0-amd64",
+            "commons-io:2.11.0@spark-k8s:3.5.2-stackable24.11.0-amd64",
+            "commons-io:2.8.0@spark-k8s:3.5.2-stackable24.11.0-amd64",
+            "commons-io:2.11.0@zookeeper:3.9.2-stackable24.11.0-amd64",
+            "commons-io:2.11.0@druid:26.0.0-stackable24.11.0-arm64",
+            "commons-io:2.4@druid:26.0.0-stackable24.11.0-arm64",
+            "commons-io:2.6@druid:26.0.0-stackable24.11.0-arm64",
+            "commons-io:2.11.0@druid:30.0.0-stackable24.11.0-arm64",
+            "commons-io:2.8.0@druid:30.0.0-stackable24.11.0-arm64",
+            "commons-io:2.8.0@hadoop:3.3.4-stackable24.11.0-arm64",
+            "commons-io:2.8.0@hadoop:3.3.6-stackable24.11.0-arm64",
+            "commons-io:2.8.0@hive:4.0.0-stackable24.11.0-arm64",
+            "commons-io:2.5@hive:3.1.3-stackable24.11.0-arm64",
+            "commons-io:2.8.0@hive:3.1.3-stackable24.11.0-arm64",
+            "commons-io:2.11.0@kafka:3.7.1-stackable24.11.0-arm64",
+            "commons-io:2.11.0@kafka:3.8.0-stackable24.11.0-arm64",
+            "commons-io:2.8.0@nifi:1.27.0-stackable24.11.0-arm64",
+            "commons-io:2.11.0@spark-k8s:3.5.1-stackable24.11.0-arm64",
+            "commons-io:2.13.0@spark-k8s:3.5.1-stackable24.11.0-arm64",
+            "commons-io:2.8.0@spark-k8s:3.5.1-stackable24.11.0-arm64",
+            "commons-io:2.11.0@spark-k8s:3.5.2-stackable24.11.0-arm64",
+            "commons-io:2.8.0@spark-k8s:3.5.2-stackable24.11.0-arm64",
+            "commons-io:2.11.0@zookeeper:3.9.2-stackable24.11.0-arm64"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Uncontrolled Resource Consumption vulnerability in Apache Commons IO.\n\nThe org.apache.commons.io.input.XmlStreamReader class may excessively consume CPU resources when processing maliciously crafted input.\n\n\nThis issue affects Apache Commons IO: from 2.0 before 2.14.0.\n\nUsers are recommended to upgrade to version 2.14.0 or later, which fixes the issue.",
+          "title": "CVE description"
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "commons-io:2.11.0@druid:26.0.0-stackable24.11.0-amd64",
+          "commons-io:2.4@druid:26.0.0-stackable24.11.0-amd64",
+          "commons-io:2.6@druid:26.0.0-stackable24.11.0-amd64",
+          "commons-io:2.11.0@druid:30.0.0-stackable24.11.0-amd64",
+          "commons-io:2.8.0@druid:30.0.0-stackable24.11.0-amd64",
+          "commons-io:2.8.0@hadoop:3.3.4-stackable24.11.0-amd64",
+          "commons-io:2.8.0@hadoop:3.3.6-stackable24.11.0-amd64",
+          "commons-io:2.8.0@hive:4.0.0-stackable24.11.0-amd64",
+          "commons-io:2.5@hive:3.1.3-stackable24.11.0-amd64",
+          "commons-io:2.8.0@hive:3.1.3-stackable24.11.0-amd64",
+          "commons-io:2.11.0@kafka:3.7.1-stackable24.11.0-amd64",
+          "commons-io:2.11.0@kafka:3.8.0-stackable24.11.0-amd64",
+          "commons-io:2.8.0@nifi:1.27.0-stackable24.11.0-amd64",
+          "commons-io:2.11.0@spark-k8s:3.5.1-stackable24.11.0-amd64",
+          "commons-io:2.13.0@spark-k8s:3.5.1-stackable24.11.0-amd64",
+          "commons-io:2.8.0@spark-k8s:3.5.1-stackable24.11.0-amd64",
+          "commons-io:2.11.0@spark-k8s:3.5.2-stackable24.11.0-amd64",
+          "commons-io:2.8.0@spark-k8s:3.5.2-stackable24.11.0-amd64",
+          "commons-io:2.11.0@zookeeper:3.9.2-stackable24.11.0-amd64",
+          "commons-io:2.11.0@druid:26.0.0-stackable24.11.0-arm64",
+          "commons-io:2.4@druid:26.0.0-stackable24.11.0-arm64",
+          "commons-io:2.6@druid:26.0.0-stackable24.11.0-arm64",
+          "commons-io:2.11.0@druid:30.0.0-stackable24.11.0-arm64",
+          "commons-io:2.8.0@druid:30.0.0-stackable24.11.0-arm64",
+          "commons-io:2.8.0@hadoop:3.3.4-stackable24.11.0-arm64",
+          "commons-io:2.8.0@hadoop:3.3.6-stackable24.11.0-arm64",
+          "commons-io:2.8.0@hive:4.0.0-stackable24.11.0-arm64",
+          "commons-io:2.5@hive:3.1.3-stackable24.11.0-arm64",
+          "commons-io:2.8.0@hive:3.1.3-stackable24.11.0-arm64",
+          "commons-io:2.11.0@kafka:3.7.1-stackable24.11.0-arm64",
+          "commons-io:2.11.0@kafka:3.8.0-stackable24.11.0-arm64",
+          "commons-io:2.8.0@nifi:1.27.0-stackable24.11.0-arm64",
+          "commons-io:2.11.0@spark-k8s:3.5.1-stackable24.11.0-arm64",
+          "commons-io:2.13.0@spark-k8s:3.5.1-stackable24.11.0-arm64",
+          "commons-io:2.8.0@spark-k8s:3.5.1-stackable24.11.0-arm64",
+          "commons-io:2.11.0@spark-k8s:3.5.2-stackable24.11.0-arm64",
+          "commons-io:2.8.0@spark-k8s:3.5.2-stackable24.11.0-arm64",
+          "commons-io:2.11.0@zookeeper:3.9.2-stackable24.11.0-arm64"
+        ]
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "Security Advisory",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-47554"
+        }
+      ],
+      "title": "CVE-2024-47554"
+    }
+  ]
+}
