@@ -5,14 +5,14 @@
       "directory_url": "https://advisories.stackable.tech/csaf/v2/advisories/"
     }
   ],
-  "last_updated": "2024-06-19T09:00:00.0Z",
+  "last_updated": "2025-02-04T12:00:00.0Z",
   "list_on_CSAF_aggregators": true,
   "metadata_version": "2.0",
   "mirror_on_CSAF_aggregators": true,
   "public_openpgp_keys": [
     {
-      "fingerprint": "A4BE1EC463AA541E15FF54AB88EDA0F297A4367A",
-      "url": "https://advisories.stackable.tech/csaf/v2/openpgp/A2A781A51BC3B8C6.txt"
+      "fingerprint": "218E03479FE800223105FEA631905DED3EFD610A",
+      "url": "https://advisories.stackable.tech/csaf/v2/openpgp/4005788070EAA8A5.txt"
     }
   ],
   "publisher": {
