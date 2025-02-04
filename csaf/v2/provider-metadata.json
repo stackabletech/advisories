@@ -17,9 +17,9 @@
   ],
   "publisher": {
     "category": "vendor",
-    "contact_details": "security@stackable.tech",
-    "issuing_authority": "The Stackable Security Team is responsible for vulnerability handling across all Stackable offerings.",
-    "name": "Stackable Security",
+    "contact_details": "product-security@stackable.tech",
+    "issuing_authority": "The Stackable Product Security Team is responsible for vulnerability handling across all Stackable offerings.",
+    "name": "Stackable Product Security Team",
     "namespace": "https://www.stackable.tech"
   },
   "role": "csaf_trusted_provider"
