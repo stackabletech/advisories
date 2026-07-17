@@ -34,7 +34,7 @@ jobs:
             -e PGP_SECRET_KEY_PASSPHRASE="${{ secrets.PGP_SECRET_KEY_PASSPHRASE }}" \
             -e SECOBSERVE_API_TOKEN="${{ secrets.SECOBSERVE_API_TOKEN }}" \
             -v ./csaf/v2/advisories:/stackable \
-            oci.stackable.tech/stackable/csaf_publisher:0.0.0-dev $VULNERABILITY_LIST
+            oci.stackable.tech/stackable/csaf_publisher:0.0.0-dev cve $VULNERABILITY_LIST
         env:
           VULNERABILITY_LIST: ${{ env.VULNERABILITY_LIST }}
 
