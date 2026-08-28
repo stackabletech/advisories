@@ -7,36 +7,48 @@ on:
         description: "Comma-separated list of vulnerability ids"
         required: true
 
+permissions: {}
+
 jobs:
   publish_advisory:
+    name: Publish advisory
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write
+      contents: write # needed to commit and push the generated advisory
+
+    environment: publish-advisory # scopes the secrets below to a dedicated GitHub Environment
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # Needed so the later "Commit changes" step can `git push` using the
+          # checked-out credentials.
+          persist-credentials: true # zizmor: ignore[artipacked]
 
       - name: Split input string into list
         id: split_input
-        run: |
-          echo "INPUT_vulnerability_ids=${{ github.event.inputs.vulnerability_ids }}" >> $GITHUB_ENV
-          IFS=',' read -r -a VULNERABILITY_LIST <<< "${{ github.event.inputs.vulnerability_ids }}"
-          echo "VULNERABILITY_LIST=${VULNERABILITY_LIST[@]}" >> $GITHUB_ENV
         env:
-          vulnerability_ids: ${{ inputs.vulnerability_ids }}
+          VULNERABILITY_IDS: ${{ inputs.vulnerability_ids }}
+        run: |
+          echo "INPUT_vulnerability_ids=$VULNERABILITY_IDS" >> $GITHUB_ENV
+          IFS=',' read -r -a VULNERABILITY_LIST <<< "$VULNERABILITY_IDS"
+          echo "VULNERABILITY_LIST=${VULNERABILITY_LIST[@]}" >> $GITHUB_ENV
 
       - name: Run Docker container
         run: |
           docker run \
-            -e PGP_SECRET_KEY="${{ secrets.PGP_SECRET_KEY }}" \
-            -e PGP_SECRET_KEY_PASSPHRASE="${{ secrets.PGP_SECRET_KEY_PASSPHRASE }}" \
-            -e SECOBSERVE_API_TOKEN="${{ secrets.SECOBSERVE_API_TOKEN }}" \
+            -e PGP_SECRET_KEY="$PGP_SECRET_KEY" \
+            -e PGP_SECRET_KEY_PASSPHRASE="$PGP_SECRET_KEY_PASSPHRASE" \
+            -e SECOBSERVE_API_TOKEN="$SECOBSERVE_API_TOKEN" \
             -v ./csaf/v2/advisories:/stackable \
             oci.stackable.tech/stackable/csaf_publisher:0.0.0-dev cve $VULNERABILITY_LIST
         env:
           VULNERABILITY_LIST: ${{ env.VULNERABILITY_LIST }}
+          PGP_SECRET_KEY: ${{ secrets.PGP_SECRET_KEY }}
+          PGP_SECRET_KEY_PASSPHRASE: ${{ secrets.PGP_SECRET_KEY_PASSPHRASE }}
+          SECOBSERVE_API_TOKEN: ${{ secrets.SECOBSERVE_API_TOKEN }}
 
       - name: Commit changes
         run: |
