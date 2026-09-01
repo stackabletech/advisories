@@ -32,9 +32,9 @@ jobs:
         env:
           VULNERABILITY_IDS: ${{ inputs.vulnerability_ids }}
         run: |
-          echo "INPUT_vulnerability_ids=$VULNERABILITY_IDS" >> $GITHUB_ENV
+          echo "INPUT_vulnerability_ids=$VULNERABILITY_IDS" >> $GITHUB_OUTPUT
           IFS=',' read -r -a VULNERABILITY_LIST <<< "$VULNERABILITY_IDS"
-          echo "VULNERABILITY_LIST=${VULNERABILITY_LIST[@]}" >> $GITHUB_ENV
+          echo "VULNERABILITY_LIST=${VULNERABILITY_LIST[@]}" >> $GITHUB_OUTPUT
 
       - name: Run Docker container
         run: |
@@ -45,7 +45,7 @@ jobs:
             -v ./csaf/v2/advisories:/stackable \
             oci.stackable.tech/stackable/csaf_publisher:0.0.0-dev cve $VULNERABILITY_LIST
         env:
-          VULNERABILITY_LIST: ${{ env.VULNERABILITY_LIST }}
+          VULNERABILITY_LIST: ${{ steps.split_input.outputs.VULNERABILITY_LIST }}
           PGP_SECRET_KEY: ${{ secrets.PGP_SECRET_KEY }}
           PGP_SECRET_KEY_PASSPHRASE: ${{ secrets.PGP_SECRET_KEY_PASSPHRASE }}
           SECOBSERVE_API_TOKEN: ${{ secrets.SECOBSERVE_API_TOKEN }}
@@ -58,4 +58,4 @@ jobs:
           git commit -m "Publish advisory for: $VULNERABILITY_LIST"
           git push
         env:
-          VULNERABILITY_LIST: ${{ env.VULNERABILITY_LIST }}
+          VULNERABILITY_LIST: ${{ steps.split_input.outputs.VULNERABILITY_LIST }}
