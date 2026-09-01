@@ -32,9 +32,9 @@ jobs:
         env:
           VULNERABILITY_IDS: ${{ inputs.vulnerability_ids }}
         run: |
-          echo "INPUT_vulnerability_ids=$VULNERABILITY_IDS" >> $GITHUB_OUTPUT
+          echo "INPUT_vulnerability_ids=$VULNERABILITY_IDS" | tee -a "$GITHUB_OUTPUT"
           IFS=',' read -r -a VULNERABILITY_LIST <<< "$VULNERABILITY_IDS"
-          echo "VULNERABILITY_LIST=${VULNERABILITY_LIST[@]}" >> $GITHUB_OUTPUT
+          echo "VULNERABILITY_LIST=${VULNERABILITY_LIST[@]}" | tee -a "$GITHUB_OUTPUT"
 
       - name: Run Docker container
         run: |
